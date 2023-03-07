@@ -1,0 +1,46 @@
+@media (min-width: 900px) {
+  .hamburger-btn {
+    display: none;
+  }
+  header {
+    display: block;
+  }
+  .header-container {
+    max-width: 1600px;
+    padding: 0px 25px;
+    margin: auto;
+  }
+  nav {
+    position: static;
+    display: block;
+    transform: translateX(0);
+    border: 0;
+    text-align: center;
+    min-width: 600px;
+  }
+  nav a {
+    display: inline-block;
+    border-bottom: 0;
+    padding: 0px 20px;
+    text-align: center;
+  }
+  .logo-header {
+    text-align: left;
+  }
+  footer {
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 30px;
+  }
+  .footer-contact_container {
+    text-align: left;
+  }
+  .footer-contact-info {
+    flex-direction: column;
+    gap: 0;
+  }
+  .border {
+    width: 2px;
+    height: 70px;
+  }
+}

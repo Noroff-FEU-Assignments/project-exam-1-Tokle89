@@ -1,4 +1,5 @@
 const url = "https://fredrik-tokle.no/schooltesting/healty-life/wp-json/wp/v2/posts?_embeded";
+
 // const container = document.querySelector(".post");
 // const title = document.querySelector(".title");
 
@@ -25,3 +26,21 @@ const url = "https://fredrik-tokle.no/schooltesting/healty-life/wp-json/wp/v2/po
 //   const text = parsedPost.querySelectorAll("p");
 //   console.log(text);
 // }
+
+const hamburger = document.querySelector(".hamburger-btn");
+const nav = document.querySelector("nav");
+console.log(nav);
+
+function toggleMenu() {
+  hamburger.onclick = function () {
+    if (nav.classList.contains("show-menu")) {
+      nav.classList.remove("show-menu");
+      console.log("working");
+    } else {
+      nav.classList.add("show-menu");
+      console.log("hello");
+    }
+  };
+}
+
+toggleMenu();

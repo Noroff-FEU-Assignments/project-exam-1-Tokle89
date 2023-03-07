@@ -1,13 +1,88 @@
 @import "imports/variables.css";
-
-.logo {
-  font-family: "Pompiere";
-  font-size: 2.5rem;
-  color: rgb(138, 129, 129);
-  font-weight: lighter;
+@import "imports/typography.css";
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto;
 }
-p {
-  font-family: var(--font-nav);
-  font-weight: 500;
-  font-size: 1.2em;
+body,
+nav {
+  background-color: var(--tertiary-color);
+}
+/* header */
+
+nav {
+  position: fixed;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: 0.5;
+  min-width: 300px;
+  left: 0px;
+  border: 2px solid var(--quaternary-color);
+  border-width: 2px 2px 0 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-bottom: 2px solid var(--quaternary-color);
+}
+.current {
+  text-decoration: underline;
+}
+.show-menu {
+  transform: translateX(0%);
+}
+.hamburger {
+  position: absolute;
+  font-size: 55px;
+  color: rgb(138, 129, 129);
+  left: 5px;
+  top: 10px;
+}
+.hamburger-btn {
+  border: none;
+  background: none;
+}
+.logo-header {
+  margin: 15px;
+  text-align: center;
+}
+
+/* footer  */
+footer * {
+  margin: 2px;
+}
+footer {
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  text-align: center;
+  border-top: 2px solid var(--quaternary-color);
+}
+
+.footer-logo_container {
+  padding-bottom: 10px;
+}
+.footer-logo_container,
+.footer-contact-info {
+  max-width: 300px;
+}
+.footer-contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.footer-contact-info h3,
+.footer-contact-info p {
+  margin: 3px 0px;
+}
+
+.border {
+  content: "";
+  width: 300px;
+  height: 2px;
+  background-color: var(--quaternary-color);
 }

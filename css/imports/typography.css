@@ -1,0 +1,33 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+}
+h1 {
+  font-size: 1.25;
+}
+h2,
+h3,
+h4 {
+  font-size: 0.93em;
+  font-weight: lighter;
+}
+p {
+  font-family: var(--font-paragraph);
+  font-size: 0.7em;
+  color: var(--secondary-color);
+}
+
+nav a {
+  font-family: var(--font-nav), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.3em;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.logo {
+  font-family: "Pompiere";
+  font-size: 2.5rem;
+  color: rgb(138, 129, 129);
+  font-weight: lighter;
+}

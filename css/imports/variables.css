@@ -3,4 +3,9 @@
   --font-paragraph: "Roboto";
   --font-nav: "Montserrat";
   --font-logo: "Pompiere";
+  --primary-color: #000;
+  --secondary-color: #4e4e4e;
+  --tertiary-color: #f7f7f7;
+  --quaternary-color: #7d705f;
+  --quinary-color: #f0e9d7;
 }
