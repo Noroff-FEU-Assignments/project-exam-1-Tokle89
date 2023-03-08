@@ -1,4 +1,5 @@
-import { renderPost } from "../renderPosts/renderposts.js";
+import { renderPost } from "../render-posts/render-posts.js";
+import { renderCardPosts } from "../render-posts/render-posts.js";
 
 const baseUrl = "https://fredrik-tokle.no/schooltesting/healty-life/wp-json/wp/v2/posts/";
 const embeded = `?_embeded`;
@@ -9,12 +10,18 @@ export async function fetchSpecificPost(id) {
     const specificUrl = baseUrl + id + embeded;
     const response = await fetch(specificUrl);
     const result = await response.json();
-    parsePost(result);
-  } catch (error) {}
+    renderPost(result);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-function parsePost(post) {
-  const parser = new DOMParser();
-  const parsedPost = parser.parseFromString(post.content.rendered, `text/html`);
-  renderPost(parsedPost, post);
+export async function fetchPosts() {
+  try {
+    const respone = await fetch(url);
+    const result = await respone.json();
+    renderCardPosts(result);
+  } catch (error) {
+    console.error(error);
+  }
 }

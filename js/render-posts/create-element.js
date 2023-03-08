@@ -1,3 +1,5 @@
+import { parseDate } from "./parse-posts.js";
+
 function createElement(tagName, classes, children, text, link, src, alt) {
   const element = document.createElement(tagName);
 
@@ -24,16 +26,14 @@ export function createTextContainer(parsedPost, post) {
   const element = createElement("div", ["intro-text"]);
 
   const paragraph = parsedPost.querySelectorAll("p");
-
   const title = createElement("h1", undefined, undefined, post.title.rendered);
-  const p = createElement("p", undefined, undefined, `Posted: ${post.date}`);
+  const date = parseDate(post);
+  const p = createElement("p", undefined, undefined, `Posted: ${date}`);
   const secondP = createElement("p", ["shortened-p"], undefined, paragraph[0].innerText);
   const link = createElement("a", ["cta"], undefined, "Read More", `details.html?id=${post.id}`);
-  const titleDiv = createElement("div");
-  const textDiv = createElement("div", ["text-container"]);
+  const titleDiv = createElement("div", undefined, [title, p]);
+  const textDiv = createElement("div", ["text-container"], [titleDiv, secondP, link]);
 
-  titleDiv.append(title, p);
-  textDiv.append(titleDiv, secondP, link);
   element.append(textDiv);
 
   return element;

@@ -5,6 +5,10 @@ nav a {
 .cta {
   font-weight: bold;
 }
+.cta:hover {
+  background: var(--tertiary-color);
+  border-radius: 5%;
+}
 .hamburger {
   cursor: pointer;
 }
