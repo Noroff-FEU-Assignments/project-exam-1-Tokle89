@@ -26,7 +26,10 @@ img {
 /* header */
 .header-container {
   height: 50px;
+  text-align: center;
+  padding-top: 10px;
 }
+
 nav {
   position: fixed;
   z-index: 100;
@@ -54,15 +57,11 @@ nav a {
   font-size: 55px;
   color: rgb(138, 129, 129);
   left: 5px;
-  top: 10px;
+  top: 6px;
 }
 .hamburger-btn {
   border: none;
   background: none;
-}
-.logo-header {
-  margin: 15px;
-  text-align: center;
 }
 
 /* footer  */
