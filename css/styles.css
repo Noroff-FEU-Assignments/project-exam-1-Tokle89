@@ -1,5 +1,9 @@
 @import "imports/variables.css";
 @import "imports/typography.css";
+@import "imports/links.css";
+* {
+  box-sizing: border-box;
+}
 body {
   min-height: 100vh;
   margin: 0;
@@ -7,12 +11,22 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: auto;
 }
+main {
+  padding: 10px;
+}
 body,
 nav {
   background-color: var(--tertiary-color);
 }
-/* header */
 
+img {
+  width: 100%;
+  display: block;
+}
+/* header */
+.header-container {
+  height: 50px;
+}
 nav {
   position: fixed;
   z-index: 100;
@@ -85,4 +99,43 @@ footer {
   width: 300px;
   height: 2px;
   background-color: var(--quaternary-color);
+}
+
+/* intro-container  */
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+.intro-container > * {
+  flex: 1;
+}
+.intro-container img {
+  object-fit: cover;
+}
+
+.intro-text {
+  background: var(--senary-color);
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+}
+.intro-text * {
+  margin: 0px;
+}
+.text-container {
+  text-align: left;
+}
+.text-container > * {
+  margin: 20px 0px;
+}
+.shortened-p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 300px;
 }

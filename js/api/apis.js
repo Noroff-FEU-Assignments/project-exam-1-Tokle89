@@ -16,5 +16,5 @@ export async function fetchSpecificPost(id) {
 function parsePost(post) {
   const parser = new DOMParser();
   const parsedPost = parser.parseFromString(post.content.rendered, `text/html`);
-  renderPost(parsedPost);
+  renderPost(parsedPost, post);
 }

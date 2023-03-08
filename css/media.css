@@ -1,14 +1,24 @@
+@media (min-width: 450px) {
+  .intro-container {
+    flex-direction: row;
+    max-width: 1520px;
+  }
+  .intro-container img {
+    min-height: 400px;
+  }
+}
+
 @media (min-width: 900px) {
+  /* header  */
   .hamburger-btn {
     display: none;
   }
-  header {
-    display: block;
-  }
+
   .header-container {
     max-width: 1600px;
     padding: 0px 25px;
     margin: auto;
+    height: 100px;
   }
   nav {
     position: static;
@@ -27,6 +37,8 @@
   .logo-header {
     text-align: left;
   }
+
+  /* footer  */
   footer {
     grid-template-columns: auto auto auto;
     align-items: center;
