@@ -11,7 +11,16 @@ nav a {
 }
 .hamburger {
   cursor: pointer;
+  font-size: 55px;
+  color: rgb(138, 129, 129);
 }
 .logo {
   text-decoration: none;
+}
+.circle-btn {
+  background: var(--tertiary-color);
+  color: var(--septenary-color);
+  font-size: 40px;
+  border-radius: 50%;
+  cursor: pointer;
 }

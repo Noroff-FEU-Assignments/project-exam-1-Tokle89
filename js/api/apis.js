@@ -21,6 +21,7 @@ export async function fetchPosts() {
     const respone = await fetch(url);
     const result = await respone.json();
     renderCardPosts(result);
+    console.log(result);
   } catch (error) {
     console.error(error);
   }
