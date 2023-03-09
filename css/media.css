@@ -7,11 +7,25 @@
   .intro-container img {
     min-height: 400px;
   }
+  .cards-container {
+    max-width: 250px;
+  }
+  .card {
+    min-width: 250px;
+    height: 380px;
+  }
+  .card img {
+    height: 200px;
+    width: 200px;
+  }
+  .circle-btn {
+    font-size: 50px;
+  }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 870px) {
   /* header  */
-  .hamburger-btn {
+  .hamburger {
     display: none;
   }
 
@@ -53,5 +67,15 @@
   .border {
     width: 2px;
     height: 70px;
+  }
+
+  .cards-container {
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cards-container {
+    max-width: 850px;
   }
 }

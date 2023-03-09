@@ -50,7 +50,7 @@ export function createCard(parsedPost, post) {
   const element = createElement("div", ["card"]);
   const images = parsedPost.querySelectorAll("img");
   const img = createElement("img", ["card-img"], undefined, undefined, undefined, `${images[0].src}`, `${images[0].alt}`);
-  const text = createTextContainer(parsedPost, post, "h2");
+  const text = createTextContainer(parsedPost, post, "h3");
   element.append(img, text);
   return element;
 }

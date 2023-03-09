@@ -6,7 +6,7 @@ nav a {
   font-weight: bold;
 }
 .cta:hover {
-  background: var(--tertiary-color);
+  background: var(--septenary-color);
   border-radius: 5%;
 }
 .hamburger {
@@ -20,7 +20,7 @@ nav a {
 .circle-btn {
   background: var(--tertiary-color);
   color: var(--septenary-color);
-  font-size: 40px;
+  font-size: 35px;
   border-radius: 50%;
   cursor: pointer;
 }

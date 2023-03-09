@@ -1,4 +1,5 @@
 import { parsePost } from "./parse-posts.js";
+import { createElement } from "./create-element.js";
 import { createImgContainer } from "./create-element.js";
 import { createTextContainer } from "./create-element.js";
 import { createCard } from "./create-element.js";
@@ -18,9 +19,10 @@ export function renderPost(post) {
 
 export function renderCardPosts(posts) {
   posts.forEach(renderCardPost);
+  const heading = createElement("h2", undefined, undefined, "View our latest post`s:");
   const leftButton = createCircleButton("left");
   const rightButton = createCircleButton("right");
-  latestPosts.append(rightButton, leftButton);
+  latestPosts.append(heading, rightButton, leftButton);
 }
 
 function renderCardPost(post) {

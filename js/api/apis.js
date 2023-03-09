@@ -21,8 +21,40 @@ export async function fetchPosts() {
     const respone = await fetch(url);
     const result = await respone.json();
     renderCardPosts(result);
+    slider();
     console.log(result);
   } catch (error) {
     console.error(error);
   }
+}
+
+function slider() {
+  const leftBtn = document.querySelector(".left_circle-btn");
+  const rightBtn = document.querySelector(".right_circle-btn");
+  const cardsContainer = document.querySelector(".cards-container");
+  const cards = document.querySelectorAll(".card");
+  const firstcard = cards[0];
+  console.log(firstcard);
+
+  let firstImgWidth = firstcard.clientWidth + 50;
+
+  leftBtn.addEventListener("click", function () {
+    cardsContainer.scrollLeft -= firstImgWidth;
+  });
+
+  rightBtn.addEventListener("click", function () {
+    cardsContainer.scrollLeft += firstImgWidth;
+  });
+
+  // if (cardsContainer.scrollLeft == 0) {
+  //   leftBtn.style.display = "none";
+  // } else {
+  //   leftBtn.style.display = "block";
+  // }
+
+  // if (cardsContainer.scrollLeft == 100) {
+  //   rightBtn.style.display = "none";
+  // } else {
+  //   rightBtn.style.display = "block";
+  // }
 }

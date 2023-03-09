@@ -54,8 +54,6 @@ nav a {
 }
 .hamburger {
   position: absolute;
-  font-size: 55px;
-  color: rgb(138, 129, 129);
   left: 5px;
   top: 6px;
 }
@@ -103,7 +101,6 @@ footer {
 .intro-text {
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 15px;
 }
 .intro-text * {
@@ -133,6 +130,7 @@ footer {
 .intro-container .intro-text {
   background: var(--senary-color);
   min-height: 250px;
+  align-items: center;
 }
 .intro-container .text-container_text > * {
   margin: 20px 0px;
@@ -148,37 +146,42 @@ footer {
 
 .latest-posts {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
   flex-direction: row-reverse;
+}
+.latest-posts h2 {
+  flex: 0 0 100%;
+  text-align: center;
+  font-size: 1;
 }
 .left_circle-btn {
   order: 1;
 }
 .cards-container {
   display: flex;
-  max-width: 300px;
+  max-width: 200px;
   overflow: hidden;
   order: 1;
-}
-.right_circle-button {
-  order: 2;
+  gap: 50px;
+  margin: 0px 20px;
+  scroll-behavior: smooth;
 }
 
 /* card  */
 .card {
-  position: relative;
-  height: 360px;
-  min-width: 250px;
-  margin: 50px 20px;
+  height: 330px;
+  min-width: 200px;
+  margin: 50px 0px;
   background-color: var(--quinary-color);
   border-radius: 15px;
 }
 
 .card img {
-  width: 220px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   margin: auto;
   border-radius: 15px;
   position: relative;
@@ -188,4 +191,5 @@ footer {
 .card .intro-text {
   position: relative;
   top: -30px;
+  padding-left: 20px;
 }
