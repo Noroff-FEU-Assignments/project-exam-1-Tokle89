@@ -150,38 +150,45 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  flex-direction: row-reverse;
+  flex-direction: column;
 }
 .latest-posts h2 {
   flex: 0 0 100%;
   text-align: center;
-  font-size: 1;
+  font-size: 1.1em;
 }
-.left_circle-btn {
-  order: 1;
+.latest-posts .btn {
+  order: 3;
+  margin-top: 30px;
 }
+
 .cards-container {
   display: flex;
-  max-width: 200px;
+  flex-direction: column;
+  max-width: 250px;
+  max-height: 920px;
   overflow: hidden;
   order: 1;
-  gap: 50px;
+
   margin: 0px 20px;
   scroll-behavior: smooth;
+}
+.circle-btn {
+  display: none;
 }
 
 /* card  */
 .card {
-  height: 330px;
-  min-width: 200px;
+  height: 380px;
+  min-width: 250px;
   margin: 50px 0px;
   background-color: var(--quinary-color);
   border-radius: 15px;
 }
 
 .card img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin: auto;
   border-radius: 15px;
   position: relative;
@@ -190,6 +197,6 @@ footer {
 }
 .card .intro-text {
   position: relative;
-  top: -30px;
+  top: -40px;
   padding-left: 20px;
 }

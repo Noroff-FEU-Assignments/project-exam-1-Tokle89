@@ -17,10 +17,22 @@ nav a {
 .logo {
   text-decoration: none;
 }
+.btn {
+  background: var(--tertiary-color);
+  color: var(--septenary-color);
+  border: 2px solid var(--tertiary-color);
+  padding: 7px 15px;
+  transition: all ease-in 0.3s;
+}
+.btn:hover {
+  color: var(--tertiary-color);
+  background-color: var(--septenary-color);
+  cursor: pointer;
+}
 .circle-btn {
   background: var(--tertiary-color);
   color: var(--septenary-color);
-  font-size: 35px;
+  font-size: 50px;
   border-radius: 50%;
   cursor: pointer;
 }

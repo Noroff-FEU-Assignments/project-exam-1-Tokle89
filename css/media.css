@@ -1,4 +1,4 @@
-@media (min-width: 450px) {
+@media (min-width: 420px) {
   /* intro-container  */
   .intro-container {
     flex-direction: row;
@@ -7,19 +7,23 @@
   .intro-container img {
     min-height: 400px;
   }
+  /* latest post  */
+  .latest-posts {
+    flex-direction: row-reverse;
+  }
   .cards-container {
-    max-width: 250px;
+    max-height: 460px;
+    flex-direction: row;
+    gap: 50px;
   }
-  .card {
-    min-width: 250px;
-    height: 380px;
-  }
-  .card img {
-    height: 200px;
-    width: 200px;
+  .latest-posts .btn {
+    display: none;
   }
   .circle-btn {
-    font-size: 50px;
+    display: block;
+  }
+  .left_circle-btn {
+    order: 1;
   }
 }
 

@@ -22,7 +22,8 @@ export function renderCardPosts(posts) {
   const heading = createElement("h2", undefined, undefined, "View our latest post`s:");
   const leftButton = createCircleButton("left");
   const rightButton = createCircleButton("right");
-  latestPosts.append(heading, rightButton, leftButton);
+  const viewBtn = createElement("button", ["btn", "latest-posts_btn"], undefined, "View More");
+  latestPosts.append(heading, rightButton, leftButton, viewBtn);
 }
 
 function renderCardPost(post) {
