@@ -141,6 +141,7 @@ footer {
   -webkit-box-orient: vertical;
   overflow: hidden;
   max-width: 300px;
+  max-height: 61px;
 }
 /* latest posts  */
 
@@ -199,4 +200,14 @@ footer {
   position: relative;
   top: -40px;
   padding-left: 20px;
+}
+
+/* blog posts page  */
+
+.blog-posts_intro-container .intro-text {
+  background: var(--quaternary-color);
+}
+
+.blog-posts_intro-container * {
+  color: white;
 }

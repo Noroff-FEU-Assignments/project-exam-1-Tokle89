@@ -9,25 +9,23 @@ export function slider() {
 
   let firstImgWidth = firstCard.clientWidth + 50;
 
-  if (cardsContainer.scrollLeft === 0) {
-    leftBtn.style.background = "#707070";
-  }
+  // if (cardsContainer.scrollLeft === 0) {
+  //   leftBtn.style.background = "#707070";
+  // }
 
   leftBtn.addEventListener("click", function () {
     cardsContainer.scrollLeft -= firstImgWidth;
-    console.log(cardsContainer.scrollLeft);
     toggleBtn();
   });
 
   rightBtn.addEventListener("click", function () {
     cardsContainer.scrollLeft += firstImgWidth;
-    console.log(cardsContainer.scrollLeft);
     toggleBtn();
   });
 
-  function toggleBtn() {
-    console.log(cardsContainer.scrollWidth);
-  }
+  // function toggleBtn() {
+  //   console.log(cardsContainer.scrollWidth);
+  // }
 }
 export function viewMore() {
   const btn = document.querySelector(".latest-posts_btn");

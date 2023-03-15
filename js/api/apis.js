@@ -5,7 +5,7 @@ import { viewMore } from "../functions/postsSlider.js";
 
 const baseUrl = "https://fredrik-tokle.no/schooltesting/healty-life/wp-json/wp/v2/posts/";
 const embeded = `?_embeded`;
-const url = baseUrl + embeded;
+const url = baseUrl + embeded + `&per_page=50`;
 
 export async function fetchSpecificPost(id) {
   try {

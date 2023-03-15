@@ -68,8 +68,3 @@ export function createCircleButton(direction) {
 
   return element;
 }
-
-export function createButton(posts) {
-  element = createElement("button", ["btn", "latest-post_btn"], undefined, "View More");
-  return element;
-}
