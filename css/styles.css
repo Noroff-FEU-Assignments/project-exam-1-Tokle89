@@ -211,3 +211,103 @@ footer {
 .blog-posts_intro-container * {
   color: white;
 }
+.blog-posts_intro-container .cta:hover {
+  color: var(--quaternary-color);
+}
+.blog-posts_container {
+  display: grid;
+  justify-items: center;
+  grid-template-areas:
+    "one two"
+    "three four"
+    "five five"
+    "six six"
+    "seven eight"
+    "nine ten"
+    "eleven eleven"
+    "twelve twelve";
+
+  grid-template-rows: (2, 1fr);
+
+  gap: 10px;
+  margin-top: 30px;
+}
+.post-nr1 {
+  grid-area: one;
+}
+.post-nr2 {
+  grid-area: two;
+}
+.post-nr3 {
+  grid-area: three;
+}
+.post-nr4 {
+  grid-area: four;
+}
+.post-nr5 {
+  grid-area: five;
+}
+.post-nr6 {
+  grid-area: six;
+}
+.post-nr7 {
+  grid-area: seven;
+}
+.post-nr8 {
+  grid-area: eight;
+}
+.post-nr9 {
+  grid-area: nine;
+}
+.post-nr10 {
+  grid-area: ten;
+}
+.post-nr11 {
+  grid-area: eleven;
+}
+.post-nr13 {
+  grid-area: twelve;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 320px;
+}
+.post-container,
+.post-container img {
+  max-width: 120px;
+  object-fit: cover;
+}
+.post-container img {
+  height: 150px;
+}
+.post-container .intro-text {
+  padding: 0px;
+}
+
+.flex-post {
+  flex-direction: row-reverse;
+  max-width: 650px;
+  max-height: 250px;
+  gap: 10px;
+}
+
+.flex-post > * {
+  flex: 1;
+}
+.flex-post img {
+  height: 200px;
+  max-width: 315px;
+  margin-top: 15px;
+}
+.flex-post .text-container_text {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-post .shortened-p {
+  -webkit-line-clamp: 7;
+  max-height: 150px;
+  max-width: none;
+}

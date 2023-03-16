@@ -4,6 +4,7 @@ nav a {
 }
 .cta {
   font-weight: bold;
+  transition: all ease-in 0.3s;
 }
 .cta:hover {
   background: var(--septenary-color);

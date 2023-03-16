@@ -68,3 +68,11 @@ export function createCircleButton(direction) {
 
   return element;
 }
+
+export function createPostContainer(parsedPost, post) {
+  const element = createElement("div", ["post-container"]);
+  const textContainer = createTextContainer(parsedPost, post, "h2");
+  const imgContainer = createImgContainer(parsedPost, "img-container");
+  element.append(textContainer, imgContainer);
+  return element;
+}

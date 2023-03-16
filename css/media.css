@@ -76,6 +76,18 @@
   .cards-container {
     max-width: 550px;
   }
+
+  /* blog-posts page  */
+
+  .blog-post_container {
+    grid-template-areas:
+      " one two three four"
+      "five five six six"
+      "seven eight nine ten"
+      "eleven eleven twelve twelve";
+    grid-template-rows: (4, 1fr);
+    grid-template-columns: (4, 1fr);
+  }
 }
 
 @media (min-width: 1200px) {
