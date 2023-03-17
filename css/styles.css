@@ -100,7 +100,6 @@ footer {
 /* container  */
 .intro-text {
   display: flex;
-  justify-content: center;
   padding: 15px;
 }
 .intro-text * {
@@ -130,7 +129,6 @@ footer {
 .intro-container .intro-text {
   background: var(--senary-color);
   min-height: 250px;
-  align-items: center;
 }
 .intro-container .text-container_text > * {
   margin: 20px 0px;
@@ -141,7 +139,6 @@ footer {
   -webkit-box-orient: vertical;
   overflow: hidden;
   max-width: 300px;
-  max-height: 61px;
 }
 /* latest posts  */
 
@@ -197,9 +194,17 @@ footer {
   box-shadow: 0px 2px 5px 2px rgba(34, 34, 34, 0.775);
 }
 .card .intro-text {
+  gap: 30px;
   position: relative;
-  top: -40px;
+  top: -25px;
   padding-left: 20px;
+  min-height: 250px;
+}
+.card .text-container_text {
+  justify-content: end;
+}
+.card h3 {
+  margin-bottom: 5px;
 }
 
 /* blog posts page  */
@@ -272,11 +277,15 @@ footer {
 .post-container {
   display: flex;
   flex-direction: column-reverse;
-  height: 320px;
+  height: 340px;
+  justify-content: space-around;
+}
+.post-container > * {
+  flex: 1;
 }
 .post-container,
 .post-container img {
-  max-width: 120px;
+  max-width: 140px;
   object-fit: cover;
 }
 .post-container img {

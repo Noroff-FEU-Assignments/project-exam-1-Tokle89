@@ -1,3 +1,7 @@
+/* html {
+  font-size: calc(12px + 0.390625vw);
+} */
+
 h1,
 h2,
 h3,
@@ -11,7 +15,7 @@ h2,
 h3,
 h4 {
   font-size: 0.9em;
-  font-weight: lighter;
+  font-weight: 300;
 }
 p {
   font-family: var(--font-paragraph);
