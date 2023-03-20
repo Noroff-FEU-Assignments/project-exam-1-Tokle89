@@ -2,7 +2,7 @@
   /* intro-container  */
   .intro-container {
     flex-direction: row;
-    max-width: 1570px;
+    max-width: 1575px;
   }
   .intro-container img {
     min-height: 400px;
@@ -48,6 +48,9 @@
   }
   a {
     font-size: 1.3em;
+  }
+  .cta {
+    max-width: 123px;
   }
   /* header  */
   .hamburger {
@@ -113,14 +116,27 @@
 
   /* blog-posts page  */
 
-  .blog-post_container {
-    grid-template-areas:
-      " one two three four"
-      "five five six six"
-      "seven eight nine ten"
-      "eleven eleven twelve twelve";
-    grid-template-rows: (4, 1fr);
-    grid-template-columns: (4, 1fr);
+  .blog-posts_container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+  }
+  .post-container .shortened-p {
+    max-width: 100%;
+  }
+  .post-container .img-container {
+    max-height: 200px;
+  }
+  .post-container img {
+    height: 200px;
+  }
+  .flex-post {
+    gap: 50px;
+    max-height: 300px;
+  }
+  .flex-post > *,
+  .flex-post img {
+    height: 300px;
+    margin: 0;
   }
 }
 
