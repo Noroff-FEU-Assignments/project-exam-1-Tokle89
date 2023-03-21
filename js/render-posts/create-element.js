@@ -1,5 +1,5 @@
 import { parseDate } from "./parse-posts.js";
-
+import { parsePost } from "./parse-posts.js";
 export function createElement(tagName, classes, children, text, link, src, alt) {
   const element = document.createElement(tagName);
 
@@ -69,10 +69,33 @@ export function createCircleButton(direction) {
   return element;
 }
 
-export function createPostContainer(parsedPost, post) {
+function createPostContainer(parsedPost, post) {
   const element = createElement("div", ["post-container"]);
   const textContainer = createTextContainer(parsedPost, post, "h2");
   const imgContainer = createImgContainer(parsedPost, "img-container");
   element.append(textContainer, imgContainer);
   return element;
 }
+
+export const createPosts = (posts) => {
+  for (let i = 0; i < posts.length; i++) {
+    if (posts[i].id == 38) {
+      continue;
+    }
+    const postsContainer = document.querySelector(".blog-posts_container");
+    const parsedPost = parsePost(posts[i]);
+    const post = createPostContainer(parsedPost, posts[i]);
+
+    let num = i + 1;
+    post.id = `${num}`;
+
+    if (i == 4 || i == 5 || i == 10 || i == 12) {
+      post.classList.add("flex-post");
+    }
+    if (post.id > 10) {
+      post.style.display = "none";
+    }
+
+    postsContainer.append(post);
+  }
+};

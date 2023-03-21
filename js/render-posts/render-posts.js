@@ -4,7 +4,8 @@ import { createImgContainer } from "./create-element.js";
 import { createTextContainer } from "./create-element.js";
 import { createCard } from "./create-element.js";
 import { createCircleButton } from "./create-element.js";
-import { createPostContainer } from "./create-element.js";
+import { createPosts } from "./create-element.js";
+import { viewMorePosts } from "../functions/view-more.js";
 
 const introContainer = document.querySelector(".intro-container");
 const latestPosts = document.querySelector(".latest-posts");
@@ -35,20 +36,8 @@ function renderCardPost(post) {
 }
 
 export function renderPosts(posts) {
-  for (let i = 0; i < posts.length; i++) {
-    if (posts[i].id == 38) {
-      continue;
-    }
-
-    let num = i + 1;
-    const parsedPost = parsePost(posts[i]);
-    const postContainer = createPostContainer(parsedPost, posts[i]);
-    postContainer.classList.add(`post-nr${num}`);
-
-    if (i == 4 || i == 5 || i == 10 || i == 12) {
-      postContainer.classList.add("flex-post");
-    }
-
-    postsContainer.append(postContainer);
-  }
+  createPosts(posts);
+  const button = createElement("button", ["btn"], undefined, "View More");
+  button.addEventListener("click", viewMorePosts);
+  postsContainer.append(button);
 }
