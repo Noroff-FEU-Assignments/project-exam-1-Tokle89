@@ -6,22 +6,22 @@ export function slider() {
   const cards = document.querySelectorAll(".card");
   const firstCard = cards[0];
 
-  const checkWidth = () => {
+  const checkWidth = (direction) => {
     let firstImgWidth = firstCard.clientWidth + 50;
-    if (leftBtn) {
+    if (direction === "left") {
       cardsContainer.scrollLeft -= firstImgWidth;
     }
-    if (rightBtn) {
+    if (direction === "right") {
       cardsContainer.scrollLeft += firstImgWidth;
     }
   };
 
   leftBtn.addEventListener("click", function () {
-    checkWidth(leftBtn);
+    checkWidth("left");
   });
 
   rightBtn.addEventListener("click", function () {
-    checkWidth(rightBtn);
+    checkWidth("right");
   });
 }
 export function viewMore() {
