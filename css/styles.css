@@ -227,6 +227,9 @@ footer {
   max-width: 1575px;
   margin: 50px auto;
 }
+.blog-posts_container .btn {
+  grid-column: span 2;
+}
 .post-container > *,
 .flex-post > * {
   flex: 1;
@@ -260,7 +263,8 @@ footer {
   grid-column: span 2;
   flex-direction: row-reverse;
   max-height: 228px;
-  gap: 20px;
+  max-width: 742px;
+  gap: 50px;
 }
 
 .flex-post img {

@@ -52,6 +52,10 @@
   .cta {
     max-width: 123px;
   }
+  .btn {
+    padding: 10px 30px;
+    font-size: 1.3em;
+  }
   /* header  */
   .hamburger {
     display: none;
@@ -120,6 +124,9 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
   }
+  .blog-posts_container .btn {
+    grid-column: span 4;
+  }
   .post-container .shortened-p {
     max-width: 100%;
   }
@@ -132,6 +139,7 @@
   .flex-post {
     gap: 50px;
     max-height: 300px;
+    max-width: none;
   }
   .flex-post > *,
   .flex-post img {
