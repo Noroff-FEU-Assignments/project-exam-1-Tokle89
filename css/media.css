@@ -9,7 +9,6 @@
   }
   .intro-container .intro-text {
     align-items: center;
-    justify-content: center;
   }
   .intro-container .shortened-p {
     max-width: 400px;
@@ -55,6 +54,9 @@
   .btn {
     padding: 10px 30px;
     font-size: 1.3em;
+  }
+  .logo {
+    font-size: 3em;
   }
   /* header  */
   .hamburger {

@@ -128,6 +128,7 @@ footer {
 .intro-container .intro-text {
   background: var(--senary-color);
   min-height: 250px;
+  justify-content: center;
 }
 .intro-container .text-container_text > * {
   margin: 20px 0px;

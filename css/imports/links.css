@@ -9,7 +9,7 @@ nav a {
 }
 .cta:hover {
   background: var(--septenary-color);
-  border-radius: 5%;
+  border-radius: 3px;
 }
 .hamburger {
   cursor: pointer;
