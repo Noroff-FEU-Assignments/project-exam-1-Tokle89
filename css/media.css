@@ -34,7 +34,7 @@
 
   /* details page  */
   .images-container {
-    gap: 50px;
+    gap: 70px;
   }
 }
 
@@ -156,13 +156,15 @@
   /* details page  */
   .detailed-post {
     gap: 30px;
+    grid-template-columns: repeat(2, 300px);
   }
   .detailed-post .btn {
     width: 171px;
   }
 
   .images-container img {
-    max-height: 250px;
+    max-height: 300px;
+    max-width: 300px;
   }
 }
 

@@ -304,7 +304,8 @@ footer {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto 1fr auto;
   padding: 30px 15px;
-  max-width: 900px;
+  gap: 30px;
+  max-width: 600px;
   margin: auto;
 }
 .detailed-post h2 {
@@ -318,7 +319,7 @@ footer {
   align-items: end;
   display: flex;
   flex-direction: column;
-  gap: 270px;
+  gap: 180px;
 }
 .images-container img {
   max-height: 200px;
