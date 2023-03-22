@@ -99,3 +99,39 @@ export const createPosts = (posts) => {
     postsContainer.append(post);
   }
 };
+
+export function createDetailedPost(parsedPost) {
+  const element = createElement("div", ["detailed-post"]);
+  const h2 = parsedPost.querySelector("h2");
+  const paragraphs = parsedPost.querySelectorAll("p");
+  const text = createElement("div");
+
+  paragraphs.forEach((p) => {
+    text.append(p);
+  });
+  const imgContainer = createElement("div", ["images-container"]);
+  const images = parsedPost.querySelectorAll("img");
+
+  images.forEach((img) => {
+    imgContainer.append(img);
+  });
+
+  const ul = parsedPost.querySelector("ul");
+  if (ul) {
+    text.append(ul);
+  }
+  const btn1 = createElement("a", ["btn"], undefined, "Home", "index.html");
+  const btn2 = createElement("a", ["btn"], undefined, "Blog Post`s", "blog-posts.html");
+  // const buttonContainer = createElement("div", ["btn-container"], [btn1, btn2]);
+  element.append(h2, text, imgContainer, btn1, btn2);
+
+  return element;
+}
+export function createHeading(post) {
+  const element = createElement("div", ["heading-container"]);
+  const title = createElement("h1", undefined, undefined, post.title.rendered);
+  const date = parseDate(post);
+  const p = createElement("p", undefined, undefined, `Posted: ${date}`);
+  element.append(title, p);
+  return element;
+}

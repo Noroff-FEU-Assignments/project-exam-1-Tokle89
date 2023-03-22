@@ -31,6 +31,11 @@
   .left_circle-btn {
     order: 1;
   }
+
+  /* details page  */
+  .images-container {
+    gap: 50px;
+  }
 }
 
 @media (min-width: 870px) {
@@ -66,9 +71,9 @@
   .header-container {
     max-width: 1600px;
     padding: 10px 25px 0px 10px;
-    margin: auto;
-    height: 80px;
+    height: 90px;
     text-align: left;
+    margin: auto;
   }
   nav {
     position: static;
@@ -147,6 +152,17 @@
   .flex-post img {
     height: 300px;
     margin: 0;
+  }
+  /* details page  */
+  .detailed-post {
+    gap: 30px;
+  }
+  .detailed-post .btn {
+    width: 171px;
+  }
+
+  .images-container img {
+    max-height: 250px;
   }
 }
 

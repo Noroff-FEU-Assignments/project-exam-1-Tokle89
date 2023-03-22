@@ -6,6 +6,8 @@ import { createCard } from "./create-element.js";
 import { createCircleButton } from "./create-element.js";
 import { createPosts } from "./create-element.js";
 import { viewMorePosts } from "../functions/view-more.js";
+import { createDetailedPost } from "./create-element.js";
+import { createHeading } from "./create-element.js";
 
 const introContainer = document.querySelector(".intro-container");
 const latestPosts = document.querySelector(".latest-posts");
@@ -40,4 +42,16 @@ export function renderPosts(posts) {
   const button = createElement("button", ["btn"], undefined, "View More");
   button.addEventListener("click", viewMorePosts);
   postsContainer.append(button);
+}
+
+export function renderPost(post) {
+  const parsedPost = parsePost(post);
+  const main = document.querySelector("main");
+  const heading = createHeading(post);
+  const detailedPost = createDetailedPost(parsedPost);
+  console.log(parsedPost);
+  const ul = parsedPost.querySelector("ul");
+  console.log(ul);
+
+  main.append(heading, detailedPost);
 }
