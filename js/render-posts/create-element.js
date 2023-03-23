@@ -104,25 +104,32 @@ export function createDetailedPost(parsedPost) {
   const element = createElement("div", ["detailed-post"]);
   const h2 = parsedPost.querySelector("h2");
   const paragraphs = parsedPost.querySelectorAll("p");
-  const text = createElement("div");
-
-  paragraphs.forEach((p) => {
-    text.append(p);
-  });
-  const imgContainer = createElement("div", ["images-container"]);
+  const contentContainer = createElement("div", ["content-container"]);
+  const div = createElement("div", ["div-container"]);
   const images = parsedPost.querySelectorAll("img");
 
-  images.forEach((img) => {
-    imgContainer.append(img);
+  paragraphs.forEach((p) => {
+    const divContainer = createElement("div", ["hello"]);
+    divContainer.append(p);
+    div.append(divContainer);
   });
+  images.forEach((img) => {
+    div.append(img);
+  });
+  contentContainer.append(div);
 
   const ul = parsedPost.querySelector("ul");
   if (ul) {
-    text.append(ul);
+    const p = createElement("p", undefined, undefined, "recipe");
+    const ulContainer = createElement("div", ["ul-container"]);
+    ulContainer.append(p, ul);
+    div.append(ulContainer);
   }
   const btn1 = createElement("a", ["btn"], undefined, "Home", "index.html");
   const btn2 = createElement("a", ["btn"], undefined, "Blog Post`s", "blog-posts.html");
-  element.append(h2, text, imgContainer, btn1, btn2);
+  const btnContainer = createElement("div", ["btn-container"]);
+  btnContainer.append(btn1, btn2);
+  element.append(h2, contentContainer, btnContainer);
 
   return element;
 }

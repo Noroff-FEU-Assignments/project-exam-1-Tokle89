@@ -17,7 +17,8 @@ h4 {
   font-size: 0.9em;
   font-weight: 300;
 }
-p {
+p,
+ul {
   font-family: var(--font-paragraph);
   font-size: 0.7em;
   color: var(--secondary-color);

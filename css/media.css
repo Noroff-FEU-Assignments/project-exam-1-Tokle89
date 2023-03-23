@@ -31,11 +31,6 @@
   .left_circle-btn {
     order: 1;
   }
-
-  /* details page  */
-  .images-container {
-    gap: 70px;
-  }
 }
 
 @media (min-width: 870px) {
@@ -47,7 +42,8 @@
   h4 {
     font-size: 1.3em;
   }
-  p {
+  p,
+  ul {
     font-size: 1em;
   }
   a {
@@ -154,17 +150,19 @@
     margin: 0;
   }
   /* details page  */
-  .detailed-post {
-    gap: 30px;
-    grid-template-columns: repeat(2, 300px);
-  }
-  .detailed-post .btn {
+
+  .btn-container .btn {
     width: 171px;
   }
-
-  .images-container img {
-    max-height: 300px;
-    max-width: 300px;
+  .div-container {
+    gap: 50px;
+    grid-template-columns: 350px 250px;
+  }
+  .div-container p {
+    max-width: 100%;
+  }
+  .div-container img {
+    max-height: 250px;
   }
 }
 
