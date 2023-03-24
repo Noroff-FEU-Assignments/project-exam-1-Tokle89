@@ -150,19 +150,14 @@
     margin: 0;
   }
   /* details page  */
-
+  .detailed-post {
+    max-width: 600px;
+  }
+  .detailed-post img {
+    max-height: 300px;
+  }
   .btn-container .btn {
     width: 171px;
-  }
-  .div-container {
-    gap: 50px;
-    grid-template-columns: 350px 250px;
-  }
-  .div-container p {
-    max-width: 100%;
-  }
-  .div-container img {
-    max-height: 250px;
   }
 }
 

@@ -109,21 +109,19 @@ export function createDetailedPost(parsedPost) {
   const images = parsedPost.querySelectorAll("img");
 
   paragraphs.forEach((p) => {
-    const divContainer = createElement("div", ["hello"]);
-    divContainer.append(p);
-    div.append(divContainer);
+    contentContainer.append(p);
   });
-  images.forEach((img) => {
-    div.append(img);
+  images.forEach((img, index) => {
+    img.id = `img-${index}`;
+    contentContainer.append(img);
   });
-  contentContainer.append(div);
 
   const ul = parsedPost.querySelector("ul");
   if (ul) {
-    const p = createElement("p", undefined, undefined, "recipe");
+    const p = createElement("p", undefined, undefined, "recipe:");
     const ulContainer = createElement("div", ["ul-container"]);
     ulContainer.append(p, ul);
-    div.append(ulContainer);
+    contentContainer.append(ulContainer);
   }
   const btn1 = createElement("a", ["btn"], undefined, "Home", "index.html");
   const btn2 = createElement("a", ["btn"], undefined, "Blog Post`s", "blog-posts.html");

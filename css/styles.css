@@ -305,7 +305,7 @@ footer {
 .detailed-post {
   padding: 30px 15px;
   margin: auto;
-  max-width: 800px;
+  max-width: 400px;
 }
 .detailed-post h2 {
   text-align: center;
@@ -315,35 +315,29 @@ footer {
   margin: 0px 0px 15px 0px;
 }
 
-.detailed-post div,
-.div-container {
-  grid-column: span 2;
-}
-.div-container {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+.content-container {
+  display: flex;
+  flex-direction: column;
   gap: 30px;
 }
-.div-container p {
-  max-width: 250px;
-}
-.div-container p,
-.div-container div {
-  grid-column: 1;
+.content-container > * {
+  flex: 1;
 }
 
-.div-container img:first-of-type {
-  grid-row: 1;
-}
-.div-container img {
-  max-height: 200px;
-  max-width: 250px;
+.content-container img {
   border-radius: 10px;
   box-shadow: 0px 3px 8px 3px rgba(34, 34, 34, 0.775);
   object-fit: cover;
   grid-column: 2;
+}
+.content-container p:first-of-type {
+  order: -2;
+}
+.content-container #img-0 {
+  order: -1;
+}
+.content-container #img-1 {
+  order: -3;
 }
 
 .ul-container p {
@@ -354,11 +348,14 @@ footer {
 
 .btn-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 50px;
 }
 .btn-container .btn {
   width: 112px;
   text-align: center;
   margin-top: 50px;
+}
+#img1 {
+  grid-row: 2;
 }
