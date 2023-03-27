@@ -1,5 +1,6 @@
 import { parseDate } from "./parse-posts.js";
 import { parsePost } from "./parse-posts.js";
+
 export function createElement(tagName, classes, children, text, link, src, alt) {
   const element = document.createElement(tagName);
 
@@ -79,7 +80,7 @@ function createPostContainer(parsedPost, post) {
 
 export const createPosts = (posts) => {
   for (let i = 0; i < posts.length; i++) {
-    if (posts[i].id == 38) {
+    if (posts[i].id === 38) {
       continue;
     }
     const postsContainer = document.querySelector(".blog-posts_container");
@@ -105,14 +106,18 @@ export function createDetailedPost(parsedPost) {
   const h2 = parsedPost.querySelector("h2");
   const paragraphs = parsedPost.querySelectorAll("p");
   const contentContainer = createElement("div", ["content-container"]);
-  const div = createElement("div", ["div-container"]);
   const images = parsedPost.querySelectorAll("img");
 
   paragraphs.forEach((p) => {
     contentContainer.append(p);
   });
-  images.forEach((img, index) => {
+
+  images.forEach((image, index) => {
+    const img = createElement("img", undefined, undefined, undefined, undefined, `${image.src}`, `${image.alt}`);
     img.id = `img-${index}`;
+    img.addEventListener("click", function () {
+      createModal(img.src);
+    });
     contentContainer.append(img);
   });
 
@@ -123,10 +128,12 @@ export function createDetailedPost(parsedPost) {
     ulContainer.append(p, ul);
     contentContainer.append(ulContainer);
   }
+
   const btn1 = createElement("a", ["btn"], undefined, "Home", "index.html");
   const btn2 = createElement("a", ["btn"], undefined, "Blog Post`s", "blog-posts.html");
   const btnContainer = createElement("div", ["btn-container"]);
   btnContainer.append(btn1, btn2);
+
   element.append(h2, contentContainer, btnContainer);
 
   return element;
@@ -138,4 +145,16 @@ export function createHeading(post) {
   const p = createElement("p", undefined, undefined, `Posted: ${date}`);
   element.append(title, p);
   return element;
+}
+
+export function createModal(src) {
+  const img = createElement("img", ["modal-img"], undefined, undefined, undefined, `${src}`);
+  const modal = createElement("div", ["modal"], [img]);
+  const main = document.querySelector("main");
+  main.append(modal, img);
+
+  modal.addEventListener("click", function () {
+    modal.remove();
+    img.remove();
+  });
 }

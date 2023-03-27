@@ -13,6 +13,7 @@ const introContainer = document.querySelector(".intro-container");
 const latestPosts = document.querySelector(".latest-posts");
 const cardsContainer = document.querySelector(".cards-container");
 const postsContainer = document.querySelector(".blog-posts_container");
+const detailedPostContainer = document.querySelector(".detailed-post_container");
 
 export function renderIntroPost(post) {
   const parsedPost = parsePost(post);
@@ -46,12 +47,10 @@ export function renderPosts(posts) {
 
 export function renderPost(post) {
   const parsedPost = parsePost(post);
-  const main = document.querySelector("main");
   const heading = createHeading(post);
   const detailedPost = createDetailedPost(parsedPost);
-  console.log(parsedPost);
-  const ul = parsedPost.querySelector("ul");
-  console.log(ul);
 
-  main.append(heading, detailedPost);
+  const ul = parsedPost.querySelector("ul");
+
+  detailedPostContainer.append(heading, detailedPost);
 }

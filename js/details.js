@@ -1,8 +1,10 @@
 import { fetchDetailedPost } from "./api/fetch-posts.js";
+import { fetchPosts } from "./api/fetch-posts.js";
+import { renderPost } from "./render-posts/render-posts.js";
+import { renderCardPosts } from "./render-posts/render-posts.js";
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-console.log(id);
-
-fetchDetailedPost(id);
+fetchDetailedPost(id).then((post) => renderPost(post));
+fetchPosts().then((posts) => renderCardPosts(posts));
