@@ -1,7 +1,6 @@
 export function parsePost(post) {
   const parser = new DOMParser();
   const parsedPost = parser.parseFromString(post.content.rendered, `text/html`);
-  parseDate(post);
   return parsedPost;
 }
 

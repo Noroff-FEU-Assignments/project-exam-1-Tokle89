@@ -8,6 +8,7 @@ import { createPosts } from "./create-element.js";
 import { viewMorePosts } from "../functions/view-more.js";
 import { createDetailedPost } from "./create-element.js";
 import { createHeading } from "./create-element.js";
+import { slider } from "../functions/postsSlider.js";
 
 const introContainer = document.querySelector(".intro-container");
 const latestPosts = document.querySelector(".latest-posts");
@@ -26,10 +27,24 @@ export function renderIntroPost(post) {
 export function renderCardPosts(posts) {
   posts.forEach(renderCardPost);
   const heading = createElement("h2", undefined, undefined, "View our latest post`s:");
-  const leftButton = createCircleButton("left");
-  const rightButton = createCircleButton("right");
+
+  const leftBtn = createCircleButton("left");
+  leftBtn.addEventListener("click", () => {
+    slider("left");
+  });
+
+  const rightBtn = createCircleButton("right");
+  rightBtn.addEventListener("click", () => {
+    slider("right");
+  });
+
   const viewBtn = createElement("button", ["btn", "latest-posts_btn"], undefined, "View More");
-  latestPosts.append(heading, rightButton, leftButton, viewBtn);
+  viewBtn.addEventListener("click", () => {
+    cardsContainer.style.maxHeight = "none";
+    viewBtn.style.display = "none";
+  });
+
+  latestPosts.append(heading, rightBtn, leftBtn, viewBtn);
 }
 
 function renderCardPost(post) {
