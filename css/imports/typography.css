@@ -18,7 +18,9 @@ h4 {
   font-weight: 300;
 }
 p,
-ul {
+ul,
+form label,
+.form-error {
   font-family: var(--font-paragraph);
   font-size: 0.7em;
   color: var(--secondary-color);

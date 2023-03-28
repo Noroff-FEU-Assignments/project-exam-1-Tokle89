@@ -286,7 +286,8 @@ footer {
 }
 
 /* details page  */
-.details-main {
+.details-main,
+.contact-main {
   padding: 20px 0px;
 }
 .heading-container {
@@ -362,6 +363,43 @@ footer {
   grid-row: 2;
 }
 
+/* contact page  */
+
+.contact-main .border {
+  margin: 20px auto;
+}
+.contact-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 0 15px;
+}
+
+.contact-info_container {
+  margin: 0 auto;
+}
+.contact-info_container * {
+  margin: 5px 0px 0px 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  padding: 6px;
+  margin-bottom: 20px;
+}
+textarea {
+  min-height: 100px;
+}
+.btn-form {
+  margin-top: 30px;
+  max-width: 111px;
+}
+.form-error {
+  color: rgb(182, 6, 6);
+  display: none;
+}
 /* modal  */
 .modal {
   width: 100%;
