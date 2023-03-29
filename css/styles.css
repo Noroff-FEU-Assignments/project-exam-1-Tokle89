@@ -44,7 +44,6 @@ nav {
 }
 nav a {
   display: block;
-  text-decoration: none;
   padding: 15px 30px;
   border-bottom: 2px solid var(--quaternary-color);
 }
@@ -317,6 +316,9 @@ footer {
 .detailed-post p {
   margin: 0px 0px 15px 0px;
 }
+.detailed-post img:hover {
+  cursor: pointer;
+}
 
 .content-container {
   display: flex;
@@ -337,10 +339,10 @@ footer {
   order: -2;
 }
 .content-container #img-0 {
-  order: -1;
+  order: -3;
 }
 .content-container #img-1 {
-  order: -3;
+  order: -1;
 }
 
 .ul-container p {
@@ -411,6 +413,9 @@ textarea {
   background: #000000d1;
   position: fixed;
   top: 0;
+}
+.modal:hover {
+  cursor: pointer;
 }
 .modal-img {
   object-fit: cover;

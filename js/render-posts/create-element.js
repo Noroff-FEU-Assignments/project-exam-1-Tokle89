@@ -79,26 +79,25 @@ function createPostContainer(parsedPost, post) {
 }
 
 export const createPosts = (posts) => {
-  for (let i = 0; i < posts.length; i++) {
-    if (posts[i].id === 38) {
-      continue;
-    }
-    const postsContainer = document.querySelector(".blog-posts_container");
-    const parsedPost = parsePost(posts[i]);
-    const post = createPostContainer(parsedPost, posts[i]);
+  posts.forEach((post, i) => {
+    if (post.id !== 38 && post.id !== 82) {
+      const postsContainer = document.querySelector(".blog-posts_container");
+      const parsedPost = parsePost(posts[i]);
+      const post = createPostContainer(parsedPost, posts[i]);
 
-    let num = i + 1;
-    post.id = `${num}`;
+      let num = i + 1;
+      post.id = `${num}`;
 
-    if (i == 4 || i == 5 || i == 10 || i == 12) {
-      post.classList.add("flex-post");
-    }
-    if (post.id > 10) {
-      post.style.display = "none";
-    }
+      if (i == 5 || i == 6 || i == 11 || i == 13) {
+        post.classList.add("flex-post");
+      }
+      if (post.id > 11) {
+        post.style.display = "none";
+      }
 
-    postsContainer.append(post);
-  }
+      postsContainer.append(post);
+    }
+  });
 };
 
 export function createDetailedPost(parsedPost) {
@@ -116,7 +115,7 @@ export function createDetailedPost(parsedPost) {
     const img = createElement("img", undefined, undefined, undefined, undefined, `${image.src}`, `${image.alt}`);
     img.id = `img-${index}`;
     img.addEventListener("click", function () {
-      createModal(img.src);
+      createModal(img.src, img.alt);
     });
     contentContainer.append(img);
   });
@@ -147,8 +146,8 @@ export function createHeading(post) {
   return element;
 }
 
-export function createModal(src) {
-  const img = createElement("img", ["modal-img"], undefined, undefined, undefined, `${src}`);
+export function createModal(src, alt) {
+  const img = createElement("img", ["modal-img"], undefined, undefined, undefined, `${src}`, `${alt}`);
   const modal = createElement("div", ["modal"], [img]);
   const main = document.querySelector("main");
   main.append(modal, img);

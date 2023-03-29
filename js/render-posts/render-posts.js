@@ -48,9 +48,11 @@ export function renderCardPosts(posts) {
 }
 
 function renderCardPost(post) {
-  const parsedPost = parsePost(post);
-  const card = createCard(parsedPost, post);
-  cardsContainer.append(card);
+  if (post.id !== 82) {
+    const parsedPost = parsePost(post);
+    const card = createCard(parsedPost, post);
+    cardsContainer.append(card);
+  }
 }
 
 export function renderPosts(posts) {
@@ -65,7 +67,16 @@ export function renderPost(post) {
   const heading = createHeading(post);
   const detailedPost = createDetailedPost(parsedPost);
 
-  const ul = parsedPost.querySelector("ul");
+  detailedPostContainer.append(heading, detailedPost);
+}
+
+export function renderAboutPost(post) {
+  const parsedPost = parsePost(post);
+  const heading = createHeading(post);
+
+  const p = heading.querySelector("P");
+  p.remove();
+  const detailedPost = createDetailedPost(parsedPost);
 
   detailedPostContainer.append(heading, detailedPost);
 }

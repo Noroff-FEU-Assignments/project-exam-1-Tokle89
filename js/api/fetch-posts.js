@@ -6,6 +6,7 @@ export async function fetchPosts() {
   try {
     const response = await fetch(url);
     const result = await response.json();
+    console.log(result);
     return result;
   } catch (error) {
     console.error(error);
