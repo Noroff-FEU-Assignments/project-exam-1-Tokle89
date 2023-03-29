@@ -9,36 +9,56 @@ const messageError = document.querySelector("#message-error");
 
 export function validateForm() {
   fullName.addEventListener("keydown", () => {
-    if (checkLength(fullName.value, 3) === true) {
+    enableFormBtn();
+
+    if (checkLength(fullName.value, 3)) {
       fullNameError.style.display = "none";
     } else {
       fullNameError.style.display = "block";
     }
-
-    email.addEventListener("keydown", () => {
-      if (validateEmail(email.value)) {
-        emailError.style.display = "none";
-      } else {
-        emailError.style.display = "block";
-      }
-    });
-
-    subject.addEventListener("keydown", () => {
-      if (checkLength(subject.value, 13) === true) {
-        subjectError.style.display = "none";
-      } else {
-        subjectError.style.display = "block";
-      }
-    });
-
-    message.addEventListener("keydown", () => {
-      if (checkLength(message.value, 23) === true) {
-        messageError.style.display = "none";
-      } else {
-        messageError.style.display = "block";
-      }
-    });
   });
+
+  email.addEventListener("keydown", () => {
+    enableFormBtn();
+
+    if (validateEmail(email.value)) {
+      emailError.style.display = "none";
+    } else {
+      emailError.style.display = "block";
+    }
+  });
+
+  subject.addEventListener("keydown", () => {
+    enableFormBtn();
+
+    if (checkLength(subject.value, 13)) {
+      subjectError.style.display = "none";
+    } else {
+      subjectError.style.display = "block";
+    }
+  });
+
+  message.addEventListener("keydown", () => {
+    enableFormBtn();
+
+    if (checkLength(message.value, 23)) {
+      messageError.style.display = "none";
+    } else {
+      messageError.style.display = "block";
+    }
+  });
+}
+
+function enableFormBtn() {
+  const btn = document.querySelector(".btn-form");
+  if (checkLength(fullName.value, 3) && validateEmail(email.value) && checkLength(subject.value, 13) && checkLength(message.value, 23)) {
+    btn.disabled = false;
+    btn.classList.remove("disabled-btn");
+    console.log("enabled");
+  } else {
+    btn.disabled = true;
+    console.log("disabled");
+  }
 }
 
 function checkLength(value, len) {

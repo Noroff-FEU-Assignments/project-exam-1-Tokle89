@@ -400,6 +400,10 @@ textarea {
   color: rgb(182, 6, 6);
   display: none;
 }
+.disabled-btn {
+  background-color: grey;
+  border: grey;
+}
 /* modal  */
 .modal {
   width: 100%;
@@ -416,4 +420,22 @@ textarea {
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/* message  */
+.msg {
+  display: none;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--septenary-color);
+  border: 2px solid var(--quaternary-color);
+  min-width: 280px;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.msg h4 {
+  margin: 0px;
 }

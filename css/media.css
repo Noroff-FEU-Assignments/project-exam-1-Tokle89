@@ -176,6 +176,11 @@
     max-width: 650px;
     min-height: 600px;
   }
+
+  .msg {
+    min-width: 500px;
+    padding: 40px 20px;
+  }
 }
 
 @media (min-width: 1250px) {
