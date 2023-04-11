@@ -338,10 +338,11 @@ footer {
 .content-container p:first-of-type {
   order: -2;
 }
-.content-container #img-0 {
+
+.content-container img:first-of-type {
   order: -3;
 }
-.content-container #img-1 {
+.content-container img:last-of-type {
   order: -1;
 }
 
@@ -361,8 +362,9 @@ footer {
   text-align: center;
   margin-top: 50px;
 }
-#img1 {
-  grid-row: 2;
+.comments {
+  max-width: 600px;
+  margin: auto;
 }
 
 /* contact page  */
@@ -401,6 +403,7 @@ textarea {
 .form-error {
   color: rgb(182, 6, 6);
   display: none;
+  margin-bottom: 3px;
 }
 .disabled-btn {
   background-color: grey;

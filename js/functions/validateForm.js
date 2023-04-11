@@ -6,58 +6,91 @@ const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subject-error");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#message-error");
+const comment = document.querySelector("#comment");
+const commentError = document.querySelector("#comment-error");
 
 export function validateForm() {
-  fullName.addEventListener("keydown", () => {
-    enableFormBtn();
+  if (fullName) {
+    fullName.addEventListener("keydown", () => {
+      enableFormBtn();
 
-    if (checkLength(fullName.value, 3)) {
-      fullNameError.style.display = "none";
-    } else {
-      fullNameError.style.display = "block";
-    }
-  });
+      if (checkLength(fullName.value, 3)) {
+        fullNameError.style.display = "none";
+      } else {
+        fullNameError.style.display = "block";
+      }
+    });
+  }
 
-  email.addEventListener("keydown", () => {
-    enableFormBtn();
+  if (email) {
+    email.addEventListener("keydown", () => {
+      enableFormBtn();
 
-    if (validateEmail(email.value)) {
-      emailError.style.display = "none";
-    } else {
-      emailError.style.display = "block";
-    }
-  });
+      if (validateEmail(email.value)) {
+        emailError.style.display = "none";
+      } else {
+        emailError.style.display = "block";
+      }
+    });
+  }
 
-  subject.addEventListener("keydown", () => {
-    enableFormBtn();
+  if (subject) {
+    subject.addEventListener("keydown", () => {
+      enableFormBtn();
 
-    if (checkLength(subject.value, 13)) {
-      subjectError.style.display = "none";
-    } else {
-      subjectError.style.display = "block";
-    }
-  });
+      if (checkLength(subject.value, 13)) {
+        subjectError.style.display = "none";
+      } else {
+        subjectError.style.display = "block";
+      }
+    });
+  }
 
-  message.addEventListener("keydown", () => {
-    enableFormBtn();
+  if (message) {
+    message.addEventListener("keydown", () => {
+      enableFormBtn();
 
-    if (checkLength(message.value, 23)) {
-      messageError.style.display = "none";
-    } else {
-      messageError.style.display = "block";
-    }
-  });
+      if (checkLength(message.value, 23)) {
+        messageError.style.display = "none";
+      } else {
+        messageError.style.display = "block";
+      }
+    });
+  }
+
+  if (comment) {
+    comment.addEventListener("keydown", () => {
+      enableFormBtn();
+      if (checkLength(comment.value, 8)) {
+        commentError.style.display = "none";
+      } else {
+        commentError.style.display = "block";
+      }
+    });
+  }
 }
 
 function enableFormBtn() {
   const btn = document.querySelector(".btn-form");
-  if (checkLength(fullName.value, 3) && validateEmail(email.value) && checkLength(subject.value, 13) && checkLength(message.value, 23)) {
-    btn.disabled = false;
-    btn.classList.remove("disabled-btn");
-    console.log("enabled");
+
+  if (subject && message) {
+    if (checkLength(fullName.value, 3) && validateEmail(email.value) && checkLength(subject.value, 13) && checkLength(message.value, 23)) {
+      btn.disabled = false;
+      btn.classList.remove("disabled-btn");
+      console.log("enabled");
+    } else {
+      btn.disabled = true;
+      console.log("disabled");
+    }
   } else {
-    btn.disabled = true;
-    console.log("disabled");
+    if (checkLength(fullName.value, 3) && validateEmail(email.value) && checkLength(comment.value, 8)) {
+      btn.disabled = false;
+      btn.classList.remove("disabled-btn");
+      console.log("enabled");
+    } else {
+      btn.disabled = true;
+      console.log("disabled");
+    }
   }
 }
 
