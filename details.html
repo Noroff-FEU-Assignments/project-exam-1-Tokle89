@@ -31,22 +31,29 @@
     </header>
     <main class="details-main">
       <section class="detailed-post_container"></section>
-      <div class="border"></div>
+
       <section class="comments">
-        <h2>Post a comment</h2>
-        <form method="post">
-          <label for="name">Full name(Minimum 5 characters)</label>
-          <div class="form-error" id="name-error">Please enter your full name</div>
-          <input type="text" id="name" name="name" />
-          <label for="email">Email address (Must be a valid email adress)</label>
-          <div class="form-error" id="email-error">Please enter a valid email address</div>
-          <input type="email" id="email" name="email" />
-          <label for="comment">Comment (Minimum 10 characters)</label>
-          <div class="form-error" id="comment-error">Comment must be minimum 10 characters</div>
-          <textarea id="comment" name="comment"></textarea>
-          <button class="btn btn-form disabled-btn" disabled>Comment</button>
-        </form>
+        <div class="border"></div>
+        <div>
+          <h2>Post a comment</h2>
+          <form method="post">
+            <label for="name">Full name(Minimum 5 characters)</label>
+            <div class="form-error" id="name-error">Please enter your full name</div>
+            <input type="text" id="name" name="name" />
+            <label for="email">Email address (Must be a valid email adress)</label>
+            <div class="form-error" id="email-error">Please enter a valid email address</div>
+            <input type="email" id="email" name="email" />
+            <label for="comment">Comment (Minimum 10 characters)</label>
+            <div class="form-error" id="comment-error">Comment must be minimum 10 characters</div>
+            <textarea id="comment" name="comment"></textarea>
+            <button class="btn btn-form disabled-btn" disabled>Comment</button>
+          </form>
+        </div>
+        <div class="border"></div>
+        <div class="view-comments"></div>
+        <div class="border"></div>
       </section>
+
       <section class="latest-posts">
         <div class="cards-container"></div>
       </section>

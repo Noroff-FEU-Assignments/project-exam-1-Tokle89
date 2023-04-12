@@ -366,7 +366,21 @@ footer {
   max-width: 600px;
   margin: auto;
 }
-
+.comments .border {
+  margin: 30px 0px;
+}
+.comment {
+  background: #fff;
+  border: 1px solid var(--quaternary-color);
+  padding: 10px;
+  margin: 30px 0px;
+}
+.comment * {
+  margin: 0;
+}
+.comment p:first-of-type {
+  margin-bottom: 10px;
+}
 /* contact page  */
 
 .contact-main .border {

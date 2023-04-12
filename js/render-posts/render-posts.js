@@ -1,5 +1,5 @@
 import { parsePost } from "./parse-posts.js";
-import { createElement } from "./create-element.js";
+import { createCommentMsg, createElement } from "./create-element.js";
 import { createImgContainer } from "./create-element.js";
 import { createTextContainer } from "./create-element.js";
 import { createCard } from "./create-element.js";
@@ -9,12 +9,14 @@ import { viewMorePosts } from "../functions/view-more.js";
 import { createDetailedPost } from "./create-element.js";
 import { createHeading } from "./create-element.js";
 import { slider } from "../functions/postsSlider.js";
+import { createComment } from "./create-element.js";
 
 const introContainer = document.querySelector(".intro-container");
 const latestPosts = document.querySelector(".latest-posts");
 const cardsContainer = document.querySelector(".cards-container");
 const postsContainer = document.querySelector(".blog-posts_container");
 const detailedPostContainer = document.querySelector(".detailed-post_container");
+const commentContainer = document.querySelector(".view-comments");
 
 export function renderIntroPost(post) {
   const parsedPost = parsePost(post);
@@ -26,6 +28,7 @@ export function renderIntroPost(post) {
 
 export function renderCardPosts(posts) {
   posts.forEach(renderCardPost);
+
   const heading = createElement("h2", undefined, undefined, "View our latest post`s:");
 
   const leftBtn = createCircleButton("left");
@@ -79,4 +82,18 @@ export function renderAboutPost(post) {
   const detailedPost = createDetailedPost(parsedPost);
 
   detailedPostContainer.append(heading, detailedPost);
+}
+
+export function renderComments(comments) {
+  if (comments.length > 0) {
+    comments.forEach(renderComment);
+  } else {
+    const msg = createCommentMsg();
+    commentContainer.append(msg);
+  }
+}
+
+function renderComment(data) {
+  const comment = createComment(data);
+  commentContainer.append(comment);
 }

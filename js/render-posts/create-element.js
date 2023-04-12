@@ -157,3 +157,25 @@ export function createModal(src, alt) {
     img.remove();
   });
 }
+
+export function createComment(comment) {
+  const element = createElement("div", ["comment"]);
+  const date = parseDate(comment);
+  const parsedComment = parsePost(comment);
+
+  const heading = createElement("h2", undefined, undefined, `${comment.author_name}`);
+  const p = createElement("p", undefined, undefined, `${date}`);
+  const div = createElement("div", undefined, [heading, p]);
+  const secondP = parsedComment.querySelector("p");
+
+  element.append(div, secondP);
+  return element;
+}
+
+export function createCommentMsg() {
+  const element = createElement("div");
+  const heading = createElement("h2", undefined, undefined, "No comments has been posted yet.");
+  element.append(heading);
+
+  return element;
+}
