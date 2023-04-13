@@ -1,4 +1,4 @@
-const fullName = document.querySelector("#name");
+const fullName = document.querySelector("#your-name");
 const fullNameError = document.querySelector("#name-error");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#email-error");
