@@ -132,7 +132,7 @@ export function createDetailedPost(parsedPost) {
   const btn2 = createElement("a", ["btn"], undefined, "Blog Post`s", "blog-posts.html");
   const btnContainer = createElement("div", ["btn-container"]);
   btnContainer.append(btn1, btn2);
-
+  console.log(h2);
   element.append(h2, contentContainer, btnContainer);
 
   return element;

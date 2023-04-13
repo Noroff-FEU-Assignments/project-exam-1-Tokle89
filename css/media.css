@@ -162,7 +162,8 @@
     margin: 0;
   }
   /* details page  */
-  .detailed-post {
+  .detailed-post,
+  .comments {
     max-width: 600px;
   }
   .detailed-post img {
