@@ -28,7 +28,8 @@ form label,
 
 nav a,
 .cta {
-  font-family: var(--font-nav), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: var(--font-nav), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: var(--font-paragraph);
 
   color: var(--primary-color);
 }

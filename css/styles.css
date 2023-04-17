@@ -79,6 +79,7 @@ footer {
   justify-content: center;
   text-align: center;
   border-top: 2px solid var(--quaternary-color);
+  padding: 15px 0px;
 }
 
 .footer-logo_container {
@@ -314,7 +315,7 @@ footer {
 .comments {
   padding: 30px 15px;
   margin: auto;
-  max-width: 400px;
+  max-width: 500px;
 }
 .detailed-post h2 {
   text-align: center;
@@ -329,8 +330,9 @@ footer {
 
 .content-container {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-direction: column-reverse;
+  gap: 50px;
+  margin-bottom: 50px;
 }
 .content-container > * {
   flex: 1;
@@ -342,16 +344,6 @@ footer {
   object-fit: cover;
   max-height: 300px;
   min-height: 300px;
-}
-.content-container p:first-of-type {
-  order: -2;
-}
-
-.content-container img:first-of-type {
-  order: -3;
-}
-.content-container img:last-of-type {
-  order: -1;
 }
 
 .ul-container p {
@@ -463,6 +455,6 @@ textarea {
   text-align: center;
 }
 
-.msg h4 {
-  margin: 0px;
+.msg > * {
+  margin: 10px;
 }

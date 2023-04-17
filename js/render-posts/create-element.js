@@ -107,17 +107,35 @@ export function createDetailedPost(parsedPost) {
   const contentContainer = createElement("div", ["content-container"]);
   const images = parsedPost.querySelectorAll("img");
 
-  paragraphs.forEach((p) => {
-    contentContainer.append(p);
+  const contentContainer1 = createElement("div", ["content-container"]);
+  const contentContainer2 = createElement("div", ["content-container"]);
+
+  paragraphs.forEach((p, index) => {
+    // contentContainer.append(p);
+    console.log(index);
+    if (index === 0) {
+      contentContainer1.append(p);
+    }
+    if (index === 1) {
+      contentContainer2.append(p);
+    }
   });
 
   images.forEach((image, index) => {
     const img = createElement("img", undefined, undefined, undefined, undefined, `${image.src}`, `${image.alt}`);
     img.id = `img-${index}`;
+
     img.addEventListener("click", function () {
       createModal(img.src, img.alt);
     });
-    contentContainer.append(img);
+    // contentContainer.append(img);
+
+    if (index === 0) {
+      contentContainer1.append(img);
+    }
+    if (index === 1) {
+      contentContainer2.append(img);
+    }
   });
 
   const ul = parsedPost.querySelector("ul");
@@ -133,7 +151,7 @@ export function createDetailedPost(parsedPost) {
   const btnContainer = createElement("div", ["btn-container"]);
   btnContainer.append(btn1, btn2);
   console.log(h2);
-  element.append(h2, contentContainer, btnContainer);
+  element.append(h2, contentContainer1, contentContainer2, btnContainer);
 
   return element;
 }

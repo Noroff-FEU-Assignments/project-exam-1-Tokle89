@@ -164,10 +164,13 @@
   /* details page  */
   .detailed-post,
   .comments {
-    max-width: 600px;
+    max-width: 900px;
   }
-  .detailed-post img {
-    max-height: 300px;
+  .detailed-post h2 {
+    text-align: left;
+  }
+  .content-container {
+    flex-direction: row;
   }
   .btn-container .btn {
     width: 171px;
