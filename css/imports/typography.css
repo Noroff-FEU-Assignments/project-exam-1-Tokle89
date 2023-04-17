@@ -1,6 +1,6 @@
-/* html {
-  font-size: calc(12px + 0.390625vw);
-} */
+body {
+  font-family: var(--font-paragraph);
+}
 
 h1,
 h2,
@@ -17,29 +17,18 @@ h4 {
   font-size: 0.9em;
   font-weight: 300;
 }
+
 p,
 ul,
 form label,
 .form-error {
-  font-family: var(--font-paragraph);
-  font-size: 0.7em;
+  font-size: 0.75em;
   color: var(--secondary-color);
 }
 
-nav a,
-.cta {
-  /* font-family: var(--font-nav), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
-  font-family: var(--font-paragraph);
-
-  color: var(--primary-color);
-}
-.btn {
-  font-family: var(--font-heading);
-  font-size: 15px;
-}
 .logo {
   font-family: "Pompiere";
   font-size: 2.5rem;
-  color: rgb(138, 129, 129);
+  color: var(--quaternary-color);
   font-weight: lighter;
 }

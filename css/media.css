@@ -5,7 +5,7 @@
     max-width: 1575px;
   }
   .intro-container img {
-    min-height: 400px;
+    min-height: 300px;
   }
   .intro-container .intro-text {
     align-items: center;
@@ -40,6 +40,13 @@
 }
 
 @media (min-width: 870px) {
+  p,
+  ul,
+  form label,
+  .form-error {
+    font-size: 1em;
+  }
+
   h1 {
     font-size: 1.5em;
   }
@@ -48,12 +55,7 @@
   h4 {
     font-size: 1.3em;
   }
-  p,
-  ul,
-  form label,
-  .form-error {
-    font-size: 1em;
-  }
+
   a {
     font-size: 1.3em;
   }
@@ -87,7 +89,6 @@
     position: static;
     display: block;
     transform: translateX(0);
-    border: 0;
     text-align: center;
     min-width: 600px;
   }
@@ -96,6 +97,10 @@
     border-bottom: 0;
     padding: 0px 20px;
     text-align: center;
+  }
+  .current {
+    background-color: none;
+    padding: 4px 10px;
   }
 
   /* footer  */

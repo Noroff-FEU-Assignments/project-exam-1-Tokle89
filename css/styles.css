@@ -32,29 +32,36 @@ ul {
   padding-left: 14px;
 }
 /* header */
+header {
+  margin-bottom: 1px;
+}
 .header-container {
   height: 50px;
   text-align: center;
   padding-top: 10px;
 }
-
+nav,
+nav a {
+  border-bottom: 2px solid var(--quaternary-color);
+}
 nav {
   position: fixed;
   z-index: 100;
   transform: translateX(-100%);
-  transition: 0.5;
-  min-width: 300px;
+  transition: 0.5s;
+  width: 100%;
   left: 0px;
-  border: 2px solid var(--quaternary-color);
   border-width: 2px 2px 0 0;
+  margin-top: 10px;
 }
 nav a {
   display: block;
-  padding: 15px 30px;
-  border-bottom: 2px solid var(--quaternary-color);
+  padding: 20px;
 }
 .current {
   text-decoration: underline;
+  background-color: var(--quaternary-color);
+  color: var(--septenary-color);
 }
 .show-menu {
   transform: translateX(0%);
@@ -63,10 +70,6 @@ nav a {
   position: absolute;
   left: 5px;
   top: 6px;
-}
-.hamburger-btn {
-  border: none;
-  background: none;
 }
 
 /* footer  */
@@ -126,24 +129,30 @@ footer {
 
 /* intro-container  */
 .intro-container {
+  /* background: #442c22; */
+  background: #402828;
   display: flex;
   flex-direction: column;
   max-width: 500px;
   margin: auto;
+  max-height: 520px;
 }
 .intro-container > * {
   flex: 1;
 }
 .intro-container img {
   object-fit: cover;
+  padding: 8px;
 }
 .intro-container .intro-text {
-  background: var(--senary-color);
   min-height: 250px;
   justify-content: center;
 }
 .intro-container .text-container_text > * {
   margin: 20px 0px;
+}
+.intro-container .intro-text * {
+  color: var(--septenary-color);
 }
 .shortened-p {
   display: -webkit-box;
@@ -192,15 +201,16 @@ footer {
   height: 380px;
   min-width: 250px;
   margin: 50px 0px;
-  background-color: var(--quinary-color);
-  border-radius: 15px;
+  /* background-color: var(--quinary-color); */
+  background: #ebcebb;
+  border-radius: 5px;
 }
 
 .card img {
   width: 200px;
   height: 200px;
   margin: auto;
-  border-radius: 15px;
+  border-radius: 5px;
   position: relative;
   top: -30px;
   box-shadow: 0px 2px 5px 2px rgba(34, 34, 34, 0.775);
@@ -220,10 +230,6 @@ footer {
 }
 
 /* blog posts page  */
-
-.blog-posts_intro-container .intro-text {
-  background: var(--quaternary-color);
-}
 
 .blog-posts_intro-container * {
   color: white;
@@ -331,6 +337,7 @@ footer {
 .content-container {
   display: flex;
   flex-direction: column-reverse;
+  flex-wrap: wrap;
   gap: 50px;
   margin-bottom: 50px;
 }
@@ -344,6 +351,8 @@ footer {
   object-fit: cover;
   max-height: 300px;
   min-height: 300px;
+}
+.ul-container {
 }
 
 .ul-container p {

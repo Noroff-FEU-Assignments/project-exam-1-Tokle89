@@ -104,15 +104,13 @@ export function createDetailedPost(parsedPost) {
   const element = createElement("div", ["detailed-post"]);
   const h2 = parsedPost.querySelector("h2");
   const paragraphs = parsedPost.querySelectorAll("p");
-  const contentContainer = createElement("div", ["content-container"]);
   const images = parsedPost.querySelectorAll("img");
 
   const contentContainer1 = createElement("div", ["content-container"]);
   const contentContainer2 = createElement("div", ["content-container"]);
+  const contentContainer3 = createElement("div", ["ul-container"]);
 
   paragraphs.forEach((p, index) => {
-    // contentContainer.append(p);
-    console.log(index);
     if (index === 0) {
       contentContainer1.append(p);
     }
@@ -142,17 +140,19 @@ export function createDetailedPost(parsedPost) {
   if (ul) {
     const p = createElement("p", undefined, undefined, "recipe:");
     const ulContainer = createElement("div", ["ul-container"]);
-    ulContainer.append(p, ul);
-    contentContainer.append(ulContainer);
+    contentContainer3.append(p, ul);
   }
 
   const btn1 = createElement("a", ["btn"], undefined, "Home", "index.html");
   const btn2 = createElement("a", ["btn"], undefined, "Blog Post`s", "blog-posts.html");
   const btnContainer = createElement("div", ["btn-container"]);
   btnContainer.append(btn1, btn2);
-  console.log(h2);
-  element.append(h2, contentContainer1, contentContainer2, btnContainer);
 
+  console.log(contentContainer2.children.length);
+  element.append(h2, contentContainer1, btnContainer);
+  if (contentContainer2.children.length > 0) {
+    element.append(contentContainer2);
+  }
   return element;
 }
 export function createHeading(post) {
