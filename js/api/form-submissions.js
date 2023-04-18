@@ -1,4 +1,4 @@
-export async function formSubmission() {
+export async function formSubmission(event) {
   const formElement = event.target,
     { action, method } = formElement,
     body = new FormData(formElement);

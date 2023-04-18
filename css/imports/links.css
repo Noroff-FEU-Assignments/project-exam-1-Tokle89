@@ -18,7 +18,7 @@ nav a {
 .hamburger {
   cursor: pointer;
   font-size: 55px;
-  color: rgb(138, 129, 129);
+  color: var(--quaternary-color);
 }
 .logo {
   text-decoration: none;
