@@ -145,13 +145,15 @@ footer .border {
   -webkit-box-orient: vertical;
   overflow: hidden;
   max-width: 300px;
+  max-height: 90%;
 }
 .intro-container .cta:hover {
   color: var(--quaternary-color);
 }
 /* latest posts  */
 .latest-posts,
-.cards-container {
+.cards-container,
+.card .text-container_text {
   display: flex;
   flex-direction: column;
 }
@@ -190,11 +192,11 @@ footer .border {
 
 .card img {
   width: 200px;
-  height: 200px;
+  height: 180px;
   margin: auto;
   border-radius: 5px;
   position: relative;
-  top: -30px;
+  top: -15px;
   box-shadow: 0px 4px 6px 2px rgba(186, 150, 150, 0.775);
 }
 .card .intro-text {
@@ -203,6 +205,10 @@ footer .border {
   top: -25px;
   padding-left: 20px;
   min-height: 250px;
+}
+.card .text-container_text {
+  max-height: 235px;
+  padding: 0px;
 }
 
 .card h3 {
@@ -264,16 +270,12 @@ footer .border {
 .flex-post .intro-text * {
   color: #402828;
 }
-
+.flex-post .text-container_text {
+  justify-content: center;
+}
 .flex-post img {
   height: 100%;
   border: 5px solid #ebcebb;
-}
-
-.flex-post .shortened-p {
-  -webkit-line-clamp: 6;
-  max-height: 150px;
-  max-width: none;
 }
 
 /* details page  */
@@ -281,6 +283,7 @@ footer .border {
 .contact-main {
   padding: 20px 0px;
 }
+
 .heading-container {
   display: flex;
   flex-direction: column;
@@ -306,9 +309,7 @@ footer .border {
   text-align: center;
   margin-bottom: 30px;
 }
-.detailed-post p {
-  margin: 0px 0px 15px 0px;
-}
+
 .detailed-post img:hover {
   cursor: pointer;
 }
@@ -325,13 +326,11 @@ footer .border {
 }
 
 .content-container img {
-  border-radius: 10px;
-  box-shadow: 0px 3px 8px 3px rgba(34, 34, 34, 0.775);
+  border-radius: 5px;
+  box-shadow: 0px 3px 3px 1px rgba(34, 34, 34, 0.775);
   object-fit: cover;
   max-height: 300px;
   min-height: 300px;
-}
-.ul-container {
 }
 
 .ul-container p {
@@ -341,9 +340,10 @@ footer .border {
 }
 
 .btn-container {
+  margin: auto;
   display: flex;
   justify-content: space-between;
-  gap: 50px;
+  max-width: 700px;
 }
 .btn-container .btn {
   width: 112px;
@@ -351,8 +351,18 @@ footer .border {
   margin-top: 50px;
 }
 
+.comments h2 {
+  margin-bottom: 15px;
+}
 .comments .border {
   margin: 30px 0px;
+}
+
+.comments form > * {
+  margin: 6px 0px;
+}
+.comments .btn {
+  margin-top: 30px;
 }
 .comment {
   background: #fff;
@@ -360,12 +370,11 @@ footer .border {
   padding: 10px;
   margin: 30px 0px;
 }
-.comment * {
-  margin: 0;
+
+.comment div {
+  margin-bottom: 15px;
 }
-.comment p:first-of-type {
-  margin-bottom: 10px;
-}
+
 /* contact page  */
 
 .contact-main .border {
@@ -381,8 +390,13 @@ footer .border {
   margin: 0 auto;
 }
 .contact-info_container * {
-  margin: 5px 0px 0px 0px;
+  margin: 7px 0px 0px 0px;
 }
+
+.form-container h3 {
+  margin-bottom: 14px;
+}
+/* about-page  */
 
 form {
   display: flex;
@@ -390,10 +404,13 @@ form {
 }
 form input {
   padding: 6px;
-  margin-bottom: 20px;
+  margin: 8px 0px 20px 0px;
+}
+form input {
+  max-width: 500px;
 }
 textarea {
-  min-height: 100px;
+  min-height: 130px;
 }
 .btn-form {
   margin-top: 30px;
@@ -402,7 +419,7 @@ textarea {
 .form-error {
   color: rgb(182, 6, 6);
   display: none;
-  margin-bottom: 3px;
+  margin-top: 3px;
 }
 .disabled-btn {
   background-color: grey;

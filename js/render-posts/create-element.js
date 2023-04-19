@@ -106,9 +106,9 @@ export function createDetailedPost(parsedPost) {
   const paragraphs = parsedPost.querySelectorAll("p");
   const images = parsedPost.querySelectorAll("img");
 
+  const container = createElement("div");
   const contentContainer1 = createElement("div", ["content-container"]);
   const contentContainer2 = createElement("div", ["content-container"]);
-  const contentContainer3 = createElement("div", ["ul-container"]);
 
   paragraphs.forEach((p, index) => {
     if (index === 0) {
@@ -126,7 +126,6 @@ export function createDetailedPost(parsedPost) {
     img.addEventListener("click", function () {
       createModal(img.src, img.alt);
     });
-    // contentContainer.append(img);
 
     if (index === 0) {
       contentContainer1.append(img);
@@ -136,11 +135,17 @@ export function createDetailedPost(parsedPost) {
     }
   });
 
+  container.append(contentContainer1);
+
+  if (contentContainer2.children.length > 0) {
+    container.append(contentContainer2);
+  }
+
   const ul = parsedPost.querySelector("ul");
   if (ul) {
     const p = createElement("p", undefined, undefined, "recipe:");
-    const ulContainer = createElement("div", ["ul-container"]);
-    contentContainer3.append(p, ul);
+    const ulContainer = createElement("div", ["ul-container"], [p, ul]);
+    container.append(ulContainer);
   }
 
   const btn1 = createElement("a", ["btn"], undefined, "Home", "index.html");
@@ -148,11 +153,8 @@ export function createDetailedPost(parsedPost) {
   const btnContainer = createElement("div", ["btn-container"]);
   btnContainer.append(btn1, btn2);
 
-  console.log(contentContainer2.children.length);
-  element.append(h2, contentContainer1, btnContainer);
-  if (contentContainer2.children.length > 0) {
-    element.append(contentContainer2);
-  }
+  element.append(h2, container, btnContainer);
+
   return element;
 }
 export function createHeading(post) {

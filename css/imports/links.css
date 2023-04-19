@@ -25,20 +25,19 @@ nav a {
 }
 .btn {
   font-size: 15px;
-  background: var(--tertiary-color);
+  background: #98757e;
   color: var(--septenary-color);
-  border: 2px solid var(--tertiary-color);
+  border: 2px solid #98757e;
   padding: 7px 15px;
   min-width: 111px;
   transition: all ease-in 0.3s;
 }
 .btn:hover {
-  color: var(--tertiary-color);
+  color: #98757e;
   background-color: var(--septenary-color);
   cursor: pointer;
 }
 .circle-btn {
-  /* background: var(--tertiary-color); */
   background: #98757e;
   color: var(--septenary-color);
   font-size: 50px;
