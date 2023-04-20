@@ -103,6 +103,8 @@ export const createPosts = (posts) => {
 export function createDetailedPost(parsedPost) {
   const element = createElement("div", ["detailed-post"]);
   const h2 = parsedPost.querySelector("h2");
+  const h3 = parsedPost.querySelector("h3");
+  const h4 = parsedPost.querySelector("h4");
   const paragraphs = parsedPost.querySelectorAll("p");
   const images = parsedPost.querySelectorAll("img");
 
@@ -110,27 +112,32 @@ export function createDetailedPost(parsedPost) {
   const contentContainer1 = createElement("div", ["content-container"]);
   const contentContainer2 = createElement("div", ["content-container"]);
 
-  paragraphs.forEach((p, index) => {
-    if (index === 0) {
+  paragraphs.forEach((p, i) => {
+    if (i === 0 && h3) {
+      const div = createElement("div", undefined, [h3, p]);
+      contentContainer1.append(div);
+    } else if (i === 0) {
       contentContainer1.append(p);
     }
-    if (index === 1) {
+    if (i === 1 && h4) {
+      const div = createElement("div", undefined, [h4, p]);
+      contentContainer2.append(div);
+    } else if (i === 1) {
       contentContainer2.append(p);
     }
   });
 
-  images.forEach((image, index) => {
+  images.forEach((image, i) => {
     const img = createElement("img", undefined, undefined, undefined, undefined, `${image.src}`, `${image.alt}`);
-    img.id = `img-${index}`;
 
     img.addEventListener("click", function () {
       createModal(img.src, img.alt);
     });
 
-    if (index === 0) {
+    if (i === 0) {
       contentContainer1.append(img);
     }
-    if (index === 1) {
+    if (i === 1) {
       contentContainer2.append(img);
     }
   });
@@ -139,13 +146,6 @@ export function createDetailedPost(parsedPost) {
 
   if (contentContainer2.children.length > 0) {
     container.append(contentContainer2);
-  }
-
-  const ul = parsedPost.querySelector("ul");
-  if (ul) {
-    const p = createElement("p", undefined, undefined, "recipe:");
-    const ulContainer = createElement("div", ["ul-container"], [p, ul]);
-    container.append(ulContainer);
   }
 
   const btn1 = createElement("a", ["btn"], undefined, "Home", "index.html");

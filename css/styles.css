@@ -310,6 +310,15 @@ footer .border {
   margin-bottom: 30px;
 }
 
+.detailed-post img {
+  align-self: center;
+}
+
+.detailed-post h3,
+.detailed-post h4 {
+  margin-bottom: 8px;
+}
+
 .detailed-post img:hover {
   cursor: pointer;
 }
