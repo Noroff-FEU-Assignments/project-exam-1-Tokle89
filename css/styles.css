@@ -272,7 +272,7 @@ footer .border {
 }
 
 .post-container .cta:hover {
-  background-color: var(--quinary-color);
+  background: #ebcebb;
 }
 .flex-post {
   grid-column: span 2;
@@ -292,6 +292,9 @@ footer .border {
 .flex-post img {
   height: 100%;
   border: 5px solid #ebcebb;
+}
+.flex-post .cta:hover {
+  background: var(--septenary-color);
 }
 
 /* details page  */
