@@ -17,7 +17,7 @@ nav a {
 }
 .hamburger {
   cursor: pointer;
-  font-size: 55px;
+  font-size: 65px;
   color: var(--quaternary-color);
 }
 .logo {
@@ -25,20 +25,20 @@ nav a {
 }
 .btn {
   font-size: 15px;
-  background: #98757e;
+  background: #955656;
   color: var(--septenary-color);
-  border: 2px solid #98757e;
+  border: 2px solid #955656;
   padding: 7px 15px;
   min-width: 111px;
   transition: all ease-in 0.3s;
 }
 .btn:hover {
-  color: #98757e;
+  color: #955656;
   background-color: var(--septenary-color);
   cursor: pointer;
 }
 .circle-btn {
-  background: #98757e;
+  background: #955656;
   color: var(--septenary-color);
   font-size: 50px;
   border-radius: 50%;

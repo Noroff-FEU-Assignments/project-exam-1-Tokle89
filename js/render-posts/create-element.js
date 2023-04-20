@@ -108,9 +108,9 @@ export function createDetailedPost(parsedPost) {
   const paragraphs = parsedPost.querySelectorAll("p");
   const images = parsedPost.querySelectorAll("img");
 
-  const container = createElement("div");
-  const contentContainer1 = createElement("div", ["content-container"]);
-  const contentContainer2 = createElement("div", ["content-container"]);
+  const container = createElement("div", ["content-container"], [h2]);
+  const contentContainer1 = createElement("div", ["content-sub_container"]);
+  const contentContainer2 = createElement("div", ["content-sub_container"]);
 
   paragraphs.forEach((p, i) => {
     if (i === 0 && h3) {
@@ -153,7 +153,7 @@ export function createDetailedPost(parsedPost) {
   const btnContainer = createElement("div", ["btn-container"]);
   btnContainer.append(btn1, btn2);
 
-  element.append(h2, container, btnContainer);
+  element.append(container, btnContainer);
 
   return element;
 }

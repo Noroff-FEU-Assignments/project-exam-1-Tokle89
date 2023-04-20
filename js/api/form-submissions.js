@@ -8,6 +8,7 @@ export async function formSubmission(event) {
       method,
       body,
     });
-    const result = respone.json();
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 }
