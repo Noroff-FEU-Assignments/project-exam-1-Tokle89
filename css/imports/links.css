@@ -23,24 +23,29 @@ nav a {
 .logo {
   text-decoration: none;
 }
+
+.btn,
+.circle-btn {
+  background: #e9465c;
+  color: var(--septenary-color);
+}
 .btn {
   font-size: 15px;
-  background: #955656;
-  color: var(--septenary-color);
-  border: 2px solid #955656;
   padding: 7px 15px;
   min-width: 111px;
   transition: all ease-in 0.3s;
+  border: 2px solid #e9465c;
 }
-.btn:hover {
-  color: #955656;
-  background-color: var(--septenary-color);
-  cursor: pointer;
-}
+
 .circle-btn {
-  background: #955656;
-  color: var(--septenary-color);
   font-size: 50px;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn:hover,
+.circle-btn:hover {
+  color: #e9465c;
+  background-color: var(--septenary-color);
   cursor: pointer;
 }

@@ -166,7 +166,7 @@
     height: 300px;
   }
 
-  /* details page  */
+  /* details page and about page  */
   .blog-posts_container {
     padding: 0 60px;
     gap: 50px;
@@ -185,6 +185,8 @@
   .btn-container .btn {
     width: 171px;
   }
+
+  /* about page  */
   .comments {
     max-width: 700px;
   }
@@ -202,9 +204,12 @@
 }
 
 @media (min-width: 1250px) {
+  /* latest posts  */
   .cards-container {
     max-width: 1090px;
   }
+
+  /* blog posts page  */
   .blog-posts_container {
     grid-template-columns: repeat(4, 1fr);
   }
