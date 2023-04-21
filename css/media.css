@@ -33,13 +33,7 @@
   .left_circle-btn {
     order: 1;
   }
-  /* blog-post page  */
-  .flex-post {
-    min-height: 250px;
-  }
-  .post-container .text-container_text {
-    justify-content: center;
-  }
+
   /* contact page  */
   .contact-info {
     display: flex;
@@ -156,7 +150,7 @@
   /* blog-posts page  */
 
   .post-container .shortened-p {
-    max-width: 95%;
+    max-width: 100%;
   }
 
   .post-container img {
@@ -164,12 +158,12 @@
   }
   .flex-post {
     gap: 30px;
-    min-height: 330px;
+    min-height: 310px;
     max-width: none;
   }
 
   .flex-post img {
-    height: 330px;
+    height: 300px;
   }
 
   /* details page  */
