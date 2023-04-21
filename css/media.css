@@ -139,7 +139,7 @@
   }
   .card {
     min-width: 330px;
-    height: 480px;
+    height: 460px;
   }
   .card img {
     height: 250px;
@@ -171,6 +171,7 @@
   .flex-post img {
     height: 330px;
   }
+
   /* details page  */
   .blog-posts_container {
     padding: 0 60px;
