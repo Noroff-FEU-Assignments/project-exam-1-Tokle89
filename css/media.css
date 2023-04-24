@@ -61,7 +61,7 @@
   }
 
   .cta {
-    max-width: 123px;
+    max-width: 107px;
   }
   .btn {
     padding: 10px 30px;
@@ -75,6 +75,9 @@
     max-width: 171px;
   }
   /* header  */
+  header {
+    height: 107px;
+  }
   .hamburger {
     display: none;
   }
@@ -90,10 +93,8 @@
   nav {
     position: static;
     display: block;
-    transform: translateX(0);
     text-align: center;
     min-width: 600px;
-    margin-top: 10px;
     border: 0;
   }
   nav a {

@@ -16,7 +16,7 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 main {
-  padding: 20px 10px;
+  padding: 0px 10px;
 }
 body,
 nav {
@@ -42,9 +42,9 @@ header {
 }
 
 nav {
+  display: none;
   position: fixed;
   z-index: 100;
-  transform: translateX(-100%);
   width: 100%;
   margin-top: 7px;
   left: 0px;
@@ -54,11 +54,21 @@ nav a {
   display: block;
   padding: 40px 20px;
   border-top: 2px solid var(--quaternary-color);
+  text-decoration: none;
 }
-.show-menu {
-  transform: translateX(0%);
-  transition: 0.5s;
+nav,
+nav a {
+  animation: show-nav 0.5s forwards;
+  transition-property: all;
+  left: -100%;
 }
+
+@keyframes show-nav {
+  100% {
+    left: 0%;
+  }
+}
+
 .current {
   text-decoration: underline;
   background-color: var(--quaternary-color);
@@ -102,7 +112,7 @@ footer .border {
 /* universal classes  */
 
 .full-width_main {
-  padding: 20px 0px;
+  padding: 0px;
 }
 .border {
   content: "";
@@ -322,7 +332,7 @@ textarea {
 .blog-posts_container {
   display: grid;
   justify-items: center;
-  gap: 50px;
+  gap: 40px;
   grid-template-columns: repeat(2, 1fr);
   max-width: 1575px;
   margin: 60px auto;
@@ -435,7 +445,6 @@ textarea {
 
 /* details page  */
 
-.comments h2,
 .comment div {
   margin-bottom: 15px;
 }

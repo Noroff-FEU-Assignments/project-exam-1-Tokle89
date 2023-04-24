@@ -1,4 +1,4 @@
-import { parsePost } from "./parse-posts.js";
+import { parsePost } from "./parse.js";
 import { createCommentMsg, createElement } from "./create-element.js";
 import { createImgContainer } from "./create-element.js";
 import { createTextContainer } from "./create-element.js";
@@ -79,6 +79,7 @@ export function renderAboutPost(post) {
 
   const p = heading.querySelector("P");
   p.remove();
+
   const detailedPost = createDetailedPost(parsedPost);
 
   detailedPostContainer.append(heading, detailedPost);

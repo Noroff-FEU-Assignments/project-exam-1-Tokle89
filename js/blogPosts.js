@@ -8,6 +8,3 @@ toggleMenu();
 
 fetchDetailedPost(38).then((post) => renderIntroPost(post));
 fetchPosts().then((posts) => renderPosts(posts));
-
-const introContainer = document.querySelector(".intro-container");
-introContainer.classList.add("blog-posts_intro-container");

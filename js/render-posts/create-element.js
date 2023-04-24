@@ -1,5 +1,5 @@
-import { parseDate } from "./parse-posts.js";
-import { parsePost } from "./parse-posts.js";
+import { parseDate } from "./parse.js";
+import { parsePost } from "./parse.js";
 
 export function createElement(tagName, classes, children, text, link, src, alt) {
   const element = document.createElement(tagName);
@@ -47,6 +47,7 @@ export function createImgContainer(parsedPost, className) {
   element.append(img);
   return element;
 }
+
 export function createCard(parsedPost, post) {
   const element = createElement("div", ["card"]);
   const images = parsedPost.querySelectorAll("img");
@@ -180,15 +181,19 @@ export function createModal(src, alt) {
 
 export function createComment(comment) {
   const element = createElement("div", ["comment"]);
-  const date = parseDate(comment);
+  const parsedDate = parseDate(comment);
   const parsedComment = parsePost(comment);
 
   const heading = createElement("h2", undefined, undefined, `${comment.author_name}`);
-  const p = createElement("p", undefined, undefined, `${date}`);
-  const div = createElement("div", undefined, [heading, p]);
-  const secondP = parsedComment.querySelector("p");
+  const date = createElement("p", undefined, undefined, `${parsedDate}`);
+  const div = createElement("div", undefined, [heading, date]);
 
-  element.append(div, secondP);
+  const paragraphs = parsedComment.querySelectorAll("p");
+  const paragraphsContainer = createElement("div");
+  paragraphs.forEach((p) => {
+    paragraphsContainer.append(p);
+  });
+  element.append(div, paragraphsContainer);
   return element;
 }
 
