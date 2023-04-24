@@ -34,6 +34,7 @@ ul {
 /* header */
 header {
   margin-bottom: 1px;
+  height: 70px;
 }
 .header-container {
   height: 50px;
@@ -42,9 +43,9 @@ header {
 }
 
 nav {
-  display: none;
   position: fixed;
   z-index: 100;
+  transform: translateX(-100%);
   width: 100%;
   margin-top: 7px;
   left: 0px;
@@ -56,17 +57,9 @@ nav a {
   border-top: 2px solid var(--quaternary-color);
   text-decoration: none;
 }
-nav,
-nav a {
-  animation: show-nav 0.5s forwards;
-  transition-property: all;
-  left: -100%;
-}
-
-@keyframes show-nav {
-  100% {
-    left: 0%;
-  }
+.show-menu {
+  transition: 0.5s;
+  transform: translateX(0%);
 }
 
 .current {

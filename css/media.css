@@ -92,6 +92,7 @@
 
   nav {
     position: static;
+    transform: translateX(0%);
     display: block;
     text-align: center;
     min-width: 600px;
