@@ -204,3 +204,11 @@ export function createCommentMsg() {
 
   return element;
 }
+
+export function createErrorMsg() {
+  const element = createElement("div", ["error-msg"]);
+  const h1 = createElement("h1", undefined, undefined, "Ooops! Something went wrong 😭");
+  const p = createElement("p", undefined, undefined, "We will try to resolve the problem as soon as possible");
+  element.append(h1, p);
+  return element;
+}

@@ -7,6 +7,7 @@ export async function postComment(name, email, comment, id) {
   });
   const url = "https://fredrik-tokle.no/schooltesting/healty-life/wp-json/wp/v2/comments?post=" + id;
   console.log(id);
+
   try {
     const response = await fetch(url, {
       method: "post",
