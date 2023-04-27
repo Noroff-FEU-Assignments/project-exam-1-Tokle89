@@ -20,7 +20,7 @@ main {
 }
 body,
 nav {
-  background-color: var(--septenary-color);
+  background-color: var(--secondary-color);
 }
 img {
   display: block;
@@ -57,7 +57,7 @@ nav {
   z-index: 100;
   transform: translateX(-100%);
   width: 100%;
-  margin-top: 7px;
+  margin-top: 6px;
   left: 0px;
   border-bottom: 2px solid var(--quaternary-color);
 }
@@ -75,7 +75,7 @@ nav a {
 .current {
   text-decoration: underline;
   background-color: var(--quaternary-color);
-  color: var(--septenary-color);
+  color: var(--secondary-color);
 }
 
 .hamburger {
@@ -87,16 +87,19 @@ nav a {
 /* footer  */
 footer * {
   margin: 3px 0px;
-  color: var(--septenary-color);
 }
-footer .logo {
-  color: var(--septenary-color);
+footer .logo,
+footer * {
+  color: var(--secondary-color);
+}
+footer,
+.footer-contact-info {
+  justify-content: center;
 }
 footer {
   display: grid;
-  justify-content: center;
   text-align: center;
-  background: #402828;
+  background: var(--quaternary-color);
   border-top: 2px solid var(--quaternary-color);
   padding: 20px 0px;
 }
@@ -109,7 +112,6 @@ footer {
 
 footer .border {
   margin: 10px 0px 5px 0px;
-  background: var(--septenary-color);
 }
 
 /* intro text container  */
@@ -127,7 +129,7 @@ footer .border {
 /* intro-container  */
 .intro-container {
   font-size: 1.2em;
-  background: #402828;
+  background: var(--quaternary-color);
   display: flex;
   flex-direction: column;
   max-width: 500px;
@@ -151,7 +153,7 @@ footer .border {
   margin: 20px 0px;
 }
 .intro-container .intro-text * {
-  color: var(--septenary-color);
+  color: var(--secondary-color);
 }
 .shortened-p {
   display: -webkit-box;
@@ -205,7 +207,7 @@ footer .border {
   min-height: 340px;
   min-width: 250px;
   margin: 50px 0px;
-  background: #ebcebb;
+  background: var(--tertiary-color);
   border-radius: 5px;
 }
 
@@ -258,7 +260,7 @@ textarea {
 .disabled-btn,
 .disabled-btn:hover {
   background-color: grey;
-  color: var(--septenary-color);
+  color: var(--secondary-color);
   border: grey;
 }
 
@@ -266,18 +268,19 @@ textarea {
 .modal {
   width: 100%;
   height: 100%;
-  background: #000000d1;
-  position: fixed;
   top: 0;
+  background: #000000d1;
+}
+.modal,
+.modal-img {
+  position: fixed;
 }
 .modal:hover {
   cursor: pointer;
 }
 .modal-img {
-  object-fit: cover;
   width: 90%;
   height: 40%;
-  position: fixed;
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
@@ -290,7 +293,7 @@ textarea {
   top: 45%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--septenary-color);
+  background-color: var(--secondary-color);
   border: 2px solid var(--quaternary-color);
   min-width: 280px;
   padding: 20px 20px;
@@ -314,7 +317,7 @@ textarea {
 }
 
 .heading-container > * {
-  color: var(--septenary-color);
+  color: var(--secondary-color);
   margin: 5px;
 }
 
@@ -328,20 +331,22 @@ textarea {
   max-width: 1575px;
   margin: 60px auto;
 }
-.blog-posts_container .btn {
+.blog-posts_container .btn,
+.flex-post {
   grid-column: span 2;
-}
-.post-container > * {
-  flex: 1;
 }
 
 .post-container,
-.post-container .text-container_text {
+.post-container .text-container_text,
+.flex-post {
   display: flex;
 }
 .post-container {
   flex-direction: column-reverse;
   gap: 10px;
+}
+.post-container > * {
+  flex: 1;
 }
 
 .post-container .text-container_text {
@@ -350,20 +355,17 @@ textarea {
 
 .post-container img {
   height: 150px;
-  object-fit: cover;
 }
 
-.post-container .cta:hover {
-  background: #ebcebb;
+.post-container .cta:hover,
+.flex-post {
+  background: var(--tertiary-color);
 }
 .flex-post {
-  grid-column: span 2;
-  display: flex;
   flex-direction: row-reverse;
   height: 220px;
   max-width: 742px;
   gap: 20px;
-  background: #ebcebb;
   padding: 5px;
 }
 
@@ -375,7 +377,7 @@ textarea {
   height: 100%;
 }
 .flex-post .cta:hover {
-  background: var(--septenary-color);
+  background: var(--secondary-color);
 }
 
 /* detailed post */
@@ -399,7 +401,7 @@ textarea {
 }
 
 .content-container {
-  background: #ebcebb;
+  background: var(--tertiary-color);
   border: 3px solid #cfb19d;
   padding: 30px;
 }

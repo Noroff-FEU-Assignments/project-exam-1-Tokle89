@@ -6,15 +6,26 @@ a {
 nav a {
   font-size: 1.3em;
 }
+
+.cta,
+.btn,
+.circle-btn {
+  transition: all ease-in 0.3s;
+}
 .cta {
   font-weight: bold;
-  transition: all ease-in 0.3s;
   max-width: 96px;
 }
+
+.cta:hover,
+.btn:hover,
+.circle-btn:hover {
+  background-color: var(--secondary-color);
+}
 .cta:hover {
-  background: var(--septenary-color);
   border-radius: 3px;
 }
+
 .hamburger {
   cursor: pointer;
   font-size: 65px;
@@ -26,15 +37,14 @@ nav a {
 
 .btn,
 .circle-btn {
-  background: #e9465c;
-  color: var(--septenary-color);
+  background: var(--quinary-color);
+  color: var(--secondary-color);
 }
 .btn {
   font-size: 15px;
   padding: 7px 15px;
   min-width: 111px;
-  transition: all ease-in 0.3s;
-  border: 2px solid #e9465c;
+  border: 2px solid var(--quinary-color);
 }
 
 .circle-btn {
@@ -45,7 +55,6 @@ nav a {
 
 .btn:hover,
 .circle-btn:hover {
-  color: #e9465c;
-  background-color: var(--septenary-color);
+  color: var(--quinary-color);
   cursor: pointer;
 }
