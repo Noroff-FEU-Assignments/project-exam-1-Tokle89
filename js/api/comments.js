@@ -1,4 +1,4 @@
-export async function postComment(name, email, comment, id) {
+export const postComment = async (name, email, comment, id) => {
   const data = JSON.stringify({
     post: id,
     author_name: name.value,
@@ -17,19 +17,13 @@ export async function postComment(name, email, comment, id) {
       body: data,
     });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
-}
+};
 
-export async function fetchComments(id) {
-  try {
-    const url = "https://fredrik-tokle.no/schooltesting/healty-life/wp-json/wp/v2/comments?post=" + id;
-    const response = await fetch(url);
-    const result = await response.json();
-
-    console.log(result);
-    return result;
-  } catch (error) {
-    console.warn(error);
-  }
-}
+export const fetchComments = async (id) => {
+  const url = "https://fredrik-tokle.no/schooltesting/healty-life/wp-json/wp/v2/comments?post=" + id;
+  const response = await fetch(url);
+  const result = await response.json();
+  return result;
+};

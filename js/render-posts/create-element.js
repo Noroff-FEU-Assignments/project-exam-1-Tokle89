@@ -86,9 +86,6 @@ export const createPosts = (posts) => {
       const parsedPost = parsePost(posts[i]);
       const post = createPostContainer(parsedPost, posts[i]);
 
-      let num = i + 1;
-      post.id = `${num}`;
-
       if (i == 5 || i == 6 || i == 11 || i == 13) {
         post.classList.add("flex-post");
       }
@@ -131,7 +128,7 @@ export function createDetailedPost(parsedPost) {
   images.forEach((image, i) => {
     const img = createElement("img", undefined, undefined, undefined, undefined, `${image.src}`, `${image.alt}`);
 
-    img.addEventListener("click", function () {
+    img.addEventListener("click", () => {
       createModal(img.src, img.alt);
     });
 
@@ -173,7 +170,7 @@ export function createModal(src, alt) {
   const main = document.querySelector("main");
   main.append(modal, img);
 
-  modal.addEventListener("click", function () {
+  modal.addEventListener("click", () => {
     modal.remove();
     img.remove();
   });
@@ -208,6 +205,14 @@ export function createCommentMsg() {
 export function createErrorMsg() {
   const element = createElement("div", ["error-msg"]);
   const h1 = createElement("h1", undefined, undefined, "Ooops! Something went wrong 😭");
+  const p = createElement("p", undefined, undefined, "We will try to resolve the problem as soon as possible");
+  element.append(h1, p);
+  return element;
+}
+
+export function createCommentErrorMsg() {
+  const element = createElement("div");
+  const h1 = createElement("h3", undefined, undefined, "We are unable to fetch the comments");
   const p = createElement("p", undefined, undefined, "We will try to resolve the problem as soon as possible");
   element.append(h1, p);
   return element;

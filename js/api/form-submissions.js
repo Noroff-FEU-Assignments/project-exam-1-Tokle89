@@ -1,14 +1,14 @@
-export async function formSubmission(event) {
+export const formSubmission = async (event) => {
   const formElement = event.target,
     { action, method } = formElement,
     body = new FormData(formElement);
 
   try {
-    const respone = await fetch(action, {
+    const response = await fetch(action, {
       method,
       body,
     });
   } catch (error) {
     console.log(error);
   }
-}
+};

@@ -1,10 +1,16 @@
 import { toggleMenu } from "./functions/toggle-menu.js";
-import { fetchDetailedPost } from "./api/fetch-posts.js";
+import { fetchSpecificPost } from "./api/fetch-posts.js";
 import { renderAboutPost } from "./render-posts/render-posts.js";
+import { displayErrorMsg } from "./functions/displayMessage.js";
 
 const displayAboutPost = async () => {
-  const aboutPost = await fetchDetailedPost(82);
-  renderAboutPost(aboutPost);
+  try {
+    const aboutPost = await fetchSpecificPost(82);
+    renderAboutPost(aboutPost);
+  } catch (error) {
+    console.warn(error);
+    displayErrorMsg();
+  }
 };
 
 displayAboutPost();

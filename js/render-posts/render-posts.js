@@ -1,15 +1,18 @@
 import { parsePost } from "./parse.js";
-import { createCommentMsg, createElement } from "./create-element.js";
-import { createImgContainer } from "./create-element.js";
-import { createTextContainer } from "./create-element.js";
-import { createCard } from "./create-element.js";
-import { createCircleButton } from "./create-element.js";
-import { createPosts } from "./create-element.js";
+import {
+  createCommentMsg,
+  createElement,
+  createImgContainer,
+  createTextContainer,
+  createCard,
+  createCircleButton,
+  createPosts,
+  createDetailedPost,
+  createHeading,
+  createComment,
+} from "./create-element.js";
 import { viewMorePosts } from "../functions/view-more.js";
-import { createDetailedPost } from "./create-element.js";
-import { createHeading } from "./create-element.js";
 import { slider } from "../functions/postsSlider.js";
-import { createComment } from "./create-element.js";
 
 const introContainer = document.querySelector(".intro-container");
 const latestPosts = document.querySelector(".latest-posts");
@@ -65,7 +68,7 @@ export function renderPosts(posts) {
   postsContainer.append(button);
 }
 
-export function renderPost(post) {
+export function renderDetailedPost(post) {
   const parsedPost = parsePost(post);
   const heading = createHeading(post);
   const detailedPost = createDetailedPost(parsedPost);

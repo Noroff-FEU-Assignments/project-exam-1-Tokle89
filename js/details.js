@@ -1,12 +1,9 @@
-import { fetchDetailedPost } from "./api/fetch-posts.js";
-import { fetchPosts } from "./api/fetch-posts.js";
-import { renderPost } from "./render-posts/render-posts.js";
-import { renderCardPosts } from "./render-posts/render-posts.js";
+import { fetchSpecificPost, fetchPosts } from "./api/fetch-posts.js";
+import { renderDetailedPost, renderCardPosts, renderComments } from "./render-posts/render-posts.js";
 import { toggleMenu } from "./functions/toggle-menu.js";
 import { validateForm } from "./functions/validateForm.js";
-import { postComment } from "./api/comments.js";
-import { fetchComments } from "./api/comments.js";
-import { renderComments } from "./render-posts/render-posts.js";
+import { postComment, fetchComments } from "./api/comments.js";
+import { displayErrorMsg, displayCommentErrorMsg } from "./functions/displayMessage.js";
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
@@ -15,19 +12,29 @@ const pageTitle = document.all[14];
 const metaContentDescription = document.all[5];
 
 const displayPosts = async () => {
-  const detailedPost = await fetchDetailedPost(id);
-  renderPost(detailedPost);
+  try {
+    const detailedPost = await fetchSpecificPost(id);
+    renderDetailedPost(detailedPost);
 
-  pageTitle.innerText = `Healthy food | ${detailedPost.title.rendered}`;
-  metaContentDescription.content = `Read more about  ${detailedPost.title.rendered} blog post  from the Healthy food blog`;
+    pageTitle.innerText = `Healthy food | ${detailedPost.title.rendered}`;
+    metaContentDescription.content = `Read ${detailedPost.title.rendered} blog post  from the Healthy food blog`;
 
-  const latestPosts = await fetchPosts();
-  renderCardPosts(latestPosts);
+    const latestPosts = await fetchPosts();
+    renderCardPosts(latestPosts);
+  } catch (error) {
+    console.warn(error);
+    displayErrorMsg();
+  }
 };
 
 const displayComments = async () => {
-  const comments = await fetchComments(id);
-  renderComments(comments);
+  try {
+    const comments = await fetchComments(id);
+    renderComments(comments);
+  } catch (error) {
+    console.warn(error);
+    displayCommentErrorMsg();
+  }
 };
 
 toggleMenu();

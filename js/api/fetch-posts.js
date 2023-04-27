@@ -8,7 +8,7 @@ export const fetchPosts = async () => {
   return result;
 };
 
-export const fetchDetailedPost = async (id) => {
+export const fetchSpecificPost = async (id) => {
   const specificUrl = baseUrl + id + embeded;
 
   const response = await fetch(specificUrl);
