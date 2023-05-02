@@ -133,7 +133,7 @@ footer .border {
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  margin: auto;
+  margin: 0px auto 50px auto;
   max-height: 520px;
 }
 .intro-container > * {
@@ -182,7 +182,7 @@ footer .border {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-bottom: 40px;
 }
 .latest-posts h2 {
   flex: 0 0 100%;
@@ -384,7 +384,7 @@ textarea {
 
 .detailed-post,
 .comments {
-  padding: 30px 15px;
+  padding: 50px 15px;
   margin: auto;
   max-width: 500px;
 }

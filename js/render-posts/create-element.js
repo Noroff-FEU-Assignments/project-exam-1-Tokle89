@@ -89,7 +89,7 @@ export const createPosts = (posts) => {
       if (i == 5 || i == 6 || i == 11 || i == 13) {
         post.classList.add("flex-post");
       }
-      if (post.id > 11) {
+      if (i >= 11) {
         post.style.display = "none";
       }
 
