@@ -54,7 +54,6 @@ header {
 
 nav {
   position: fixed;
-  z-index: 100;
   transform: translateX(-100%);
   width: 100%;
   margin-top: 6px;
@@ -106,7 +105,6 @@ footer {
 
 .footer-contact-info {
   display: flex;
-  justify-content: center;
   gap: 20px;
 }
 

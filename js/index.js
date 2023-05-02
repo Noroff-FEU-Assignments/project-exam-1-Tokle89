@@ -1,8 +1,8 @@
 import { fetchSpecificPost, fetchPosts } from "./api/fetch-posts.js";
 import { renderIntroPost, renderCardPosts } from "./render-posts/render-posts.js";
-import { removeSpinner } from "./functions/removeSpinner.js";
+import { removeSpinner } from "./functions/remove-spinner.js";
 import { toggleMenu } from "./functions/toggle-menu.js";
-import { displayErrorMsg } from "./functions/displayMessage.js";
+import { displayErrorMsg } from "./functions/display-message.js";
 
 toggleMenu();
 

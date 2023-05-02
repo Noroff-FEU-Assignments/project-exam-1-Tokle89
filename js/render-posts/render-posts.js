@@ -12,7 +12,7 @@ import {
   createComment,
 } from "./create-element.js";
 import { viewMorePosts } from "../functions/view-more.js";
-import { slider } from "../functions/postsSlider.js";
+import { slider } from "../functions/posts-slider.js";
 
 const introContainer = document.querySelector(".intro-container");
 const latestPosts = document.querySelector(".latest-posts");

@@ -16,18 +16,28 @@ nav a {
   font-weight: bold;
   max-width: 96px;
 }
-
+.btn,
+.hamburger,
+.circle-btn {
+  cursor: pointer;
+}
+.btn,
+.circle-btn {
+  background: var(--quinary-color);
+  color: var(--secondary-color);
+}
 .cta:hover,
 .btn:hover,
 .circle-btn:hover {
   background-color: var(--secondary-color);
+  color: var(--quinary-color);
 }
+.hamburger,
 .cta:hover {
   border-radius: 3px;
 }
 
 .hamburger {
-  cursor: pointer;
   font-size: 65px;
   color: var(--quaternary-color);
 }
@@ -35,11 +45,6 @@ nav a {
   text-decoration: none;
 }
 
-.btn,
-.circle-btn {
-  background: var(--quinary-color);
-  color: var(--secondary-color);
-}
 .btn {
   font-size: 15px;
   padding: 7px 15px;
@@ -50,11 +55,8 @@ nav a {
 .circle-btn {
   font-size: 50px;
   border-radius: 50%;
-  cursor: pointer;
 }
 
-.btn:hover,
 .circle-btn:hover {
   color: var(--quinary-color);
-  cursor: pointer;
 }
