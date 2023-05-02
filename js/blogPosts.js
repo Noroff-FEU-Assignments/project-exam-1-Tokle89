@@ -1,8 +1,8 @@
 import { fetchSpecificPost, fetchPosts } from "./api/fetch-posts.js";
 import { renderIntroPost, renderPosts } from "./render-posts/render-posts.js";
 import { toggleMenu } from "./functions/toggle-menu.js";
-import { removeSpinner } from "./functions/removeSpinner.js";
-import { displayErrorMsg } from "./functions/displayMessage.js";
+import { removeSpinner } from "./functions/remove-spinner.js";
+import { displayErrorMsg } from "./functions/display-message.js";
 
 const displayPosts = async () => {
   try {

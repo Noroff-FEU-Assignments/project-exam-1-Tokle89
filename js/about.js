@@ -1,7 +1,7 @@
 import { toggleMenu } from "./functions/toggle-menu.js";
 import { fetchSpecificPost } from "./api/fetch-posts.js";
 import { renderAboutPost } from "./render-posts/render-posts.js";
-import { displayErrorMsg } from "./functions/displayMessage.js";
+import { displayErrorMsg } from "./functions/display-message.js";
 
 const displayAboutPost = async () => {
   try {

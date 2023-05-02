@@ -12,17 +12,6 @@ const form = document.querySelector("form");
 const pageTitle = document.all[14];
 const metaContentDescription = document.all[5];
 
-document.addEventListener("DOMContentLoaded", () => {
-  const scrollY = parseInt(localStorage.getItem("scrollY"));
-  console.log(scrollY);
-  if (scrollY) {
-    setTimeout(function () {
-      window.scrollTo(0, scrollY);
-      console.log("working");
-    }, 2);
-  }
-});
-
 const displayPosts = async () => {
   try {
     const detailedPost = await fetchSpecificPost(id);
@@ -58,7 +47,6 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   const [name, email, comment] = event.target.elements;
   postComment(name, email, comment, id);
-  localStorage.setItem("scrollY", window.scrollY);
   form.reset();
   refreshCommentSection();
 });
