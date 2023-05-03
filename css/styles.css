@@ -102,7 +102,7 @@ footer {
   text-align: center;
   background: var(--quaternary-color);
   border-top: 2px solid var(--quaternary-color);
-  padding: 20px 0px;
+  padding: 30px 0px;
 }
 
 .footer-contact-info {
@@ -183,12 +183,16 @@ footer .border {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  margin: auto;
+  padding-bottom: 30px;
+}
+.latest-posts .container {
+  order: 1;
+  padding: 0 30px;
 }
 .latest-posts h2 {
-  flex: 0 0 100%;
-  text-align: center;
   font-size: 1.2em;
+  text-align: center;
 }
 .latest-posts .btn {
   order: 3;
@@ -200,7 +204,6 @@ footer .border {
   max-height: 850px;
   overflow: hidden;
   order: 1;
-  margin: 0px 30px;
   scroll-behavior: smooth;
 }
 

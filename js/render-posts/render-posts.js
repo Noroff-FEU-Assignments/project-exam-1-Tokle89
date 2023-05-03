@@ -31,8 +31,6 @@ export function renderIntroPost(post) {
 export function renderCardPosts(posts) {
   posts.forEach(renderCardPost);
 
-  const heading = createElement("h2", undefined, undefined, "View our latest post`s:");
-
   const leftBtn = createCircleButton("left");
   leftBtn.addEventListener("click", () => {
     slider("left");
@@ -49,7 +47,7 @@ export function renderCardPosts(posts) {
     viewBtn.style.display = "none";
   });
 
-  latestPosts.append(heading, rightBtn, leftBtn, viewBtn);
+  latestPosts.append(rightBtn, leftBtn, viewBtn);
 }
 
 function renderCardPost(post) {

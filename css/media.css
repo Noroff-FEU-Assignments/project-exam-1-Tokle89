@@ -2,7 +2,7 @@
   /* intro-container  */
   .intro-container {
     flex-direction: row;
-    max-width: 1460px;
+    max-width: 1455px;
     min-height: 380px;
   }
   .intro-container img {
@@ -20,6 +20,7 @@
   .latest-posts {
     flex-direction: row-reverse;
   }
+
   .cards-container {
     flex-direction: row;
     gap: 50px;
@@ -130,6 +131,7 @@
   /* latest post  */
   .latest-posts h2 {
     font-size: 1.5em;
+    text-align: left;
   }
   .cards-container {
     max-width: 710px;
@@ -209,6 +211,7 @@
 
 @media (min-width: 1250px) {
   /* latest posts  */
+
   .cards-container {
     max-width: 1090px;
   }
