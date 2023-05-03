@@ -5,6 +5,7 @@ a {
 
 nav a {
   font-size: 1.3em;
+  text-decoration: none;
 }
 
 .cta,
@@ -30,9 +31,11 @@ nav a {
 .btn:hover,
 .circle-btn:hover {
   background-color: var(--secondary-color);
+}
+.btn:hover,
+.circle-btn:hover {
   color: var(--quinary-color);
 }
-.hamburger,
 .cta:hover {
   border-radius: 3px;
 }
