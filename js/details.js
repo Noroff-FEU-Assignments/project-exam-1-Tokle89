@@ -4,6 +4,7 @@ import { toggleMenu } from "./functions/toggle-menu.js";
 import { validateForm } from "./functions/validate-form.js";
 import { postComment, fetchComments } from "./api/comments.js";
 import { displayErrorMsg, displayCommentErrorMsg } from "./functions/display-message.js";
+import { removeSpinner } from "./functions/remove-spinner.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -22,6 +23,7 @@ const displayPosts = async () => {
 
     const latestPosts = await fetchPosts();
     renderCardPosts(latestPosts);
+    removeSpinner();
   } catch (error) {
     console.warn(error);
     displayErrorMsg();

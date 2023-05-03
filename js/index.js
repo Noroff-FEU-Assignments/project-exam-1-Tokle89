@@ -9,10 +9,10 @@ toggleMenu();
 const displayPosts = async () => {
   try {
     const introPost = await fetchSpecificPost(5);
-    removeSpinner();
     renderIntroPost(introPost);
     const latestPosts = await fetchPosts();
     renderCardPosts(latestPosts);
+    removeSpinner();
   } catch (error) {
     console.warn(error);
     displayErrorMsg();

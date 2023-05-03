@@ -40,10 +40,12 @@ ul {
   height: 2px;
   background-color: var(--quaternary-color);
 }
+.top-border {
+  height: 5px;
+}
 
 /* header */
 header {
-  margin-bottom: 1px;
   height: 70px;
 }
 .header-container {
@@ -110,6 +112,7 @@ footer {
 
 footer .border {
   margin: 10px 0px 5px 0px;
+  background-color: var(--secondary-color);
 }
 
 /* intro text container  */
@@ -244,7 +247,7 @@ form input {
   max-width: 500px;
 }
 textarea {
-  min-height: 130px;
+  min-height: 140px;
 }
 .btn-form {
   margin-top: 10px;
@@ -300,23 +303,6 @@ textarea {
 
 .msg > * {
   margin: 10px;
-}
-
-/* heading container for details, contact and about page  */
-
-.heading-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  background: var(--quaternary-color);
-  height: 150px;
-  text-align: center;
-}
-
-.heading-container > * {
-  color: var(--secondary-color);
-  margin: 5px;
 }
 
 /* blog posts page  */
@@ -379,7 +365,9 @@ textarea {
 }
 
 /* detailed post */
-
+.heading-container {
+  margin-bottom: 15px;
+}
 .detailed-post,
 .comments {
   padding: 50px 15px;
@@ -387,8 +375,7 @@ textarea {
   max-width: 500px;
 }
 .detailed-post h2 {
-  text-align: center;
-  margin-bottom: 15px;
+  margin: 5px 0px;
   max-width: 410px;
 }
 
@@ -417,7 +404,7 @@ textarea {
 .content-sub_container img {
   border-radius: 5px;
   box-shadow: 0px 3px 2px 1px rgba(34, 34, 34, 0.775);
-  max-height: 250px;
+  max-height: 150px;
   align-self: center;
   cursor: pointer;
 }
@@ -455,6 +442,10 @@ textarea {
   padding: 10px;
   margin: 30px 0px;
 }
+.comment p {
+  width: 100%;
+  word-break: break-all;
+}
 
 /* contact page  */
 
@@ -466,7 +457,9 @@ textarea {
   margin: 50px auto;
   padding: 0 15px;
 }
-
+.contact-container h1 {
+  margin-bottom: 20px;
+}
 .contact-info_container {
   margin: 0 auto;
 }
@@ -475,10 +468,17 @@ textarea {
 }
 
 /* spinner  */
-
+.spinner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #79797926;
+}
 .spinner {
   display: block;
   position: relative;
+  top: 30vh;
   margin: auto;
   max-width: 80px;
   height: 80px;
@@ -486,12 +486,12 @@ textarea {
 .spinner:after {
   content: " ";
   display: block;
-  width: 64px;
-  height: 64px;
+  width: 90px;
+  height: 90px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid #fff;
-  border-color: #fff transparent #fff transparent;
+  border: 10px solid var(--quaternary-color);
+  border-color: var(--quaternary-color) transparent var(--quaternary-color) transparent;
   animation: spinner 1.2s linear infinite;
 }
 

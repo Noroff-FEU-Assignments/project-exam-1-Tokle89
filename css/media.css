@@ -2,7 +2,7 @@
   /* intro-container  */
   .intro-container {
     flex-direction: row;
-    max-width: 1575px;
+    max-width: 1460px;
     min-height: 380px;
   }
   .intro-container img {
@@ -40,6 +40,10 @@
     flex-direction: row;
     gap: 50px;
   }
+
+  .content-sub_container img {
+    max-height: 200px;
+  }
 }
 
 @media (min-width: 870px) {
@@ -73,19 +77,18 @@
   }
 
   /* header  */
-  header {
-    height: 107px;
-  }
   .hamburger {
     display: none;
   }
 
   .header-container {
-    max-width: 1600px;
-    padding: 10px 25px 0px 10px;
-    height: 90px;
-    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
     margin: auto;
+    max-width: 1600px;
+    height: 70px;
+    padding: 0px 5px;
   }
 
   nav {
@@ -93,13 +96,12 @@
     transform: translateX(0%);
     display: block;
     text-align: center;
-    min-width: 600px;
-    margin-top: 7px;
+    max-width: 600px;
     border: 0;
   }
   nav a {
     display: inline-block;
-    padding: 0px 40px;
+    padding: 0px 20px;
     text-align: center;
     border: 0;
   }
@@ -175,13 +177,14 @@
   .detailed-post {
     max-width: 900px;
   }
-  .detailed-post h2 {
-    text-align: left;
-  }
+
   .content-sub_container {
     flex-direction: row;
     gap: 50px;
     margin-bottom: 30px;
+  }
+  .content-sub_container img {
+    max-height: 250px;
   }
   .btn-container .btn {
     width: 171px;

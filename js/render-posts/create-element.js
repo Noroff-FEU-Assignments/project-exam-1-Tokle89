@@ -98,7 +98,7 @@ export const createPosts = (posts) => {
   });
 };
 
-export function createDetailedPost(parsedPost) {
+export function createDetailedPost(parsedPost, post) {
   const element = createElement("div", ["detailed-post"]);
   const h2 = parsedPost.querySelector("h2");
   const h3 = parsedPost.querySelector("h3");
@@ -106,16 +106,23 @@ export function createDetailedPost(parsedPost) {
   const paragraphs = parsedPost.querySelectorAll("p");
   const images = parsedPost.querySelectorAll("img");
 
-  const container = createElement("div", ["content-container"], [h2]);
+  const container = createElement("div", ["content-container"]);
+  const headerContainer = createElement("div", ["heading-container"]);
   const contentContainer1 = createElement("div", ["content-sub_container"]);
   const contentContainer2 = createElement("div", ["content-sub_container"]);
 
+  const title = createElement("h1", undefined, undefined, post.title.rendered);
+  const date = parseDate(post);
+  const p = createElement("p", ["date"], undefined, `Posted: ${date}`);
+  headerContainer.append(title, p);
+
   paragraphs.forEach((p, i) => {
     if (i === 0 && h3) {
-      const div = createElement("div", undefined, [h3, p]);
+      const div = createElement("div", undefined, [h2, h3, p]);
       contentContainer1.append(div);
     } else if (i === 0) {
-      contentContainer1.append(p);
+      const div = createElement("div", undefined, [h2, p]);
+      contentContainer1.append(div);
     }
     if (i === 1 && h4) {
       const div = createElement("div", undefined, [h4, p]);
@@ -140,7 +147,7 @@ export function createDetailedPost(parsedPost) {
     }
   });
 
-  container.append(contentContainer1);
+  container.append(headerContainer, contentContainer1);
 
   if (contentContainer2.children.length > 0) {
     container.append(contentContainer2);
@@ -153,14 +160,6 @@ export function createDetailedPost(parsedPost) {
 
   element.append(container, btnContainer);
 
-  return element;
-}
-export function createHeading(post) {
-  const element = createElement("div", ["heading-container"]);
-  const title = createElement("h1", undefined, undefined, post.title.rendered);
-  const date = parseDate(post);
-  const p = createElement("p", undefined, undefined, `Posted: ${date}`);
-  element.append(title, p);
   return element;
 }
 

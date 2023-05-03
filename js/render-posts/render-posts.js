@@ -8,7 +8,6 @@ import {
   createCircleButton,
   createPosts,
   createDetailedPost,
-  createHeading,
   createComment,
 } from "./create-element.js";
 import { viewMorePosts } from "../functions/view-more.js";
@@ -70,22 +69,17 @@ export function renderPosts(posts) {
 
 export function renderDetailedPost(post) {
   const parsedPost = parsePost(post);
-  const heading = createHeading(post);
-  const detailedPost = createDetailedPost(parsedPost);
-
-  detailedPostContainer.append(heading, detailedPost);
+  const detailedPost = createDetailedPost(parsedPost, post);
+  detailedPostContainer.append(detailedPost);
 }
 
 export function renderAboutPost(post) {
   const parsedPost = parsePost(post);
-  const heading = createHeading(post);
+  const detailedPost = createDetailedPost(parsedPost, post);
+  const date = detailedPost.querySelector(".date");
+  date.remove();
 
-  const p = heading.querySelector("P");
-  p.remove();
-
-  const detailedPost = createDetailedPost(parsedPost);
-
-  detailedPostContainer.append(heading, detailedPost);
+  detailedPostContainer.append(detailedPost);
 }
 
 export function renderComments(comments) {
