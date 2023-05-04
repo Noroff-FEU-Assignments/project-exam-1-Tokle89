@@ -35,15 +35,16 @@
     order: 1;
   }
 
+  /* detailed post  */
+  .content-sub_container img {
+    max-height: 200px;
+  }
+
   /* contact page  */
   .contact-info {
     display: flex;
     flex-direction: row;
     gap: 50px;
-  }
-
-  .content-sub_container img {
-    max-height: 200px;
   }
 }
 
@@ -61,7 +62,8 @@
   h2,
   h3,
   h4,
-  a {
+  a,
+  .btn {
     font-size: 1.3em;
   }
 
@@ -70,7 +72,6 @@
   }
   .btn {
     padding: 10px 30px;
-    font-size: 1.3em;
     min-width: 171px;
   }
   .logo {
@@ -87,24 +88,22 @@
     justify-content: space-around;
     align-items: end;
     margin: auto;
-    max-width: 1600px;
+    max-width: 1400px;
     height: 70px;
-    padding: 0px 5px;
   }
-
+  nav,
+  nav a {
+    border: 0;
+  }
   nav {
     position: static;
     transform: translateX(0%);
     display: block;
-    text-align: center;
     max-width: 600px;
-    border: 0;
   }
   nav a {
     display: inline-block;
     padding: 0px 20px;
-    text-align: center;
-    border: 0;
   }
   .current {
     padding: 4px 10px;
@@ -126,6 +125,15 @@
     height: 70px;
   }
 
+  /* intro-container  */
+
+  .intro-container img {
+    max-height: 520px;
+  }
+  .intro-container .cta {
+    font-size: 1.3em;
+  }
+
   /* latest post  */
   .latest-posts h2 {
     font-size: 1.5em;
@@ -143,16 +151,11 @@
     width: 280px;
   }
 
-  /* intro-container  */
-
-  .intro-container img {
-    max-height: 520px;
-  }
-  .intro-container .cta {
-    font-size: 1.3em;
-  }
   /* blog-posts page  */
-
+  .blog-posts_container {
+    padding: 0 60px;
+    gap: 50px;
+  }
   .post-container img {
     height: 200px;
   }
@@ -160,9 +163,8 @@
     max-width: 100%;
   }
   .flex-post {
-    gap: 30px;
+    gap: 60px;
     min-height: 310px;
-    max-width: none;
   }
 
   .flex-post img {
@@ -170,10 +172,7 @@
   }
 
   /* details page and about page  */
-  .blog-posts_container {
-    padding: 0 60px;
-    gap: 50px;
-  }
+
   .detailed-post {
     max-width: 900px;
   }
@@ -181,13 +180,11 @@
   .content-sub_container {
     flex-direction: row;
     gap: 50px;
-    margin-bottom: 30px;
   }
   .content-sub_container img {
     max-height: 250px;
   }
 
-  /* about page  */
   .comments {
     max-width: 700px;
   }
