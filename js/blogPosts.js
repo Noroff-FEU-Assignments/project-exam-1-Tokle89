@@ -8,10 +8,10 @@ const displayPosts = async () => {
   try {
     const introPost = await fetchSpecificPost(38);
     renderIntroPost(introPost);
-    removeSpinner();
 
     const posts = await fetchPosts();
     renderPosts(posts);
+    removeSpinner();
   } catch (error) {
     console.warn(error);
     displayErrorMsg();

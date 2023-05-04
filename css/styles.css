@@ -317,9 +317,10 @@ footer .border {
   display: flex;
 }
 .content-container {
-  background: var(--tertiary-color);
-  border: 3px solid #cfb19d;
-  padding: 30px;
+  background: #ebcebbdb;
+  border: 3px solid #c8a68d;
+  padding: 20px 30px;
+  height: 100%;
 }
 
 .content-sub_container {

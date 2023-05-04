@@ -81,6 +81,7 @@ export function renderAboutPost(post) {
 }
 
 export function renderComments(comments) {
+  console.log(comments);
   if (comments.length > 0) {
     comments.forEach(renderComment);
   } else {
