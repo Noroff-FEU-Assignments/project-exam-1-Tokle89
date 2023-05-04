@@ -317,8 +317,8 @@ footer .border {
   display: flex;
 }
 .content-container {
-  background: #ebcebbdb;
-  border: 3px solid #c8a68d;
+  /* background: #ebcebbdb;
+  border: 3px solid #c8a68d; */
   padding: 30px;
   height: 100%;
 }
