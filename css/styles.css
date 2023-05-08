@@ -341,12 +341,11 @@ footer .border {
 }
 
 .btn-container {
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: 700px;
 }
 .btn-container .btn {
   text-align: center;
-  margin-top: 50px;
 }
 
 /* comment section  */
