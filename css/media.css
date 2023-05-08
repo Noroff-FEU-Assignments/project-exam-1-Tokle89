@@ -34,7 +34,15 @@
   .left_circle-btn {
     order: 1;
   }
+  /* blog-post page   */
+  .post-container .text-container_text {
+    min-height: fit-content;
+    justify-content: center;
+  }
 
+  .flex-post {
+    gap: 35px;
+  }
   /* detailed post  */
   .content-sub_container img {
     max-height: 200px;

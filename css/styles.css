@@ -257,7 +257,10 @@ footer .border {
 
 .post-container .text-container_text {
   flex-direction: column;
+  min-height: 163px;
+  justify-content: space-between;
 }
+
 .post-container .text-container_text > * {
   margin: 5px 0px;
 }
@@ -273,7 +276,7 @@ footer .border {
 .flex-post {
   flex-direction: row-reverse;
   height: 220px;
-  gap: 40px;
+  gap: 15px;
   padding: 5px;
 }
 
