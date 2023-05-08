@@ -67,6 +67,14 @@ nav a {
 }
 
 /* footer  */
+footer {
+  display: grid;
+  justify-content: center;
+  background: var(--quaternary-color);
+  border-top: 2px solid var(--quaternary-color);
+  padding: 30px 0px;
+}
+
 footer * {
   margin: 3px 0px;
 }
@@ -75,13 +83,6 @@ footer * {
   color: var(--secondary-color);
 }
 
-footer {
-  display: grid;
-  justify-content: center;
-  background: var(--quaternary-color);
-  border-top: 2px solid var(--quaternary-color);
-  padding: 30px 0px;
-}
 .footer-logo_container {
   text-align: center;
 }
@@ -492,7 +493,6 @@ textarea {
 }
 .spinner:after {
   content: " ";
-  display: block;
   margin: 8px;
   border-radius: 50%;
   border: 10px solid;
