@@ -1,6 +1,7 @@
 ## Project Exam 1
 
 For my project exam i was tasked with creating a blog site
+![healthy life](https://github.com/Noroff-FEU-Assignments/project-exam-1-Tokle89/assets/94007467/e5b83031-a0df-4ff6-b04f-846064ad3b07)
 
 ## Description
 
